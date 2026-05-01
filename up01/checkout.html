@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento PIX - Checkout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-pink: #f9005b;
+            --success-green: #10b981;
+            --text-dark: #1a1a1a;
+            --text-gray: #6b7280;
+            --bg-body: #f7fafc;
+            --bg-qr: #f4f6f9;
+            --border-light: #e5e7eb;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            min-height: 100vh;
+        }
+
+        .checkout-container {
+            background-color: #ffffff;
+            width: 100%;
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #loading {
+            position: fixed;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.95);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            color: var(--primary-pink);
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .spinner {
+            border: 4px solid rgba(249, 0, 91, 0.2);
+            border-left-color: var(--primary-pink);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin-bottom: 10px;
+        }
+
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        .banner {
+            background-color: var(--primary-pink);
+            color: #ffffff;
+            text-align: center;
+            padding: 18px;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            transition: background-color 0.3s;
+        }
+
+        .banner svg {
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+
+        .content {
+            padding: 30px 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .title {
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--text-dark);
+            text-align: center;
+            margin-bottom: 25px;
+            line-height: 1.3;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: var(--border-light);
+            border: none;
+            margin-bottom: 25px;
+        }
+
+        .qr-code-box {
+            background-color: var(--bg-qr);
+            width: 182px;
+            height: 182px;
+            border-radius: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 25px auto;
+        }
+
+        .qr-code-box img {
+            width: 160px;
+            height: 160px;
+            border-radius: 8px;
+            background-color: #fff;
+            padding: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            display: none;
+        }
+
+        .value-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 0 5px;
+        }
+
+        .value-label {
+            color: var(--text-gray);
+            font-size: 16px;
+        }
+
+        .value-amount {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .pix-string {
+            font-size: 13px;
+            color: #8b92a1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 25px;
+            background: #f9fafb;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px dashed var(--border-light);
+        }
+
+        .btn-copy {
+            background-color: var(--primary-pink);
+            color: white;
+            border: none;
+            width: 398px;
+            height: 44px;
+            max-width: 100%;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.1s, background-color 0.2s;
+            margin: 0 auto 35px auto;
+            padding: 0;
+        }
+
+        .btn-copy:active { transform: scale(0.98); }
+
+        .btn-copy svg {
+            width: 20px;
+            height: 20px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+        }
+
+        .instructions-title {
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .instruction-step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 18px;
+            font-size: 14px;
+            color: #374151;
+            line-height: 1.6;
+        }
+
+        .step-number {
+            background-color: var(--primary-pink);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .security-box {
+            background-color: #f9fafb;
+            border: 1px solid var(--border-light);
+            border-radius: 16px;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .security-box p {
+            font-size: 13px;
+            color: #4b5563;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .security-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        .security-item svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--success-green);
+            stroke-width: 2;
+            margin-right: 12px;
+            fill: none;
+        }
+
+        .footer-terms {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 12px;
+            color: #8b92a1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            background-color: #ffffff;
+        }
+
+        .footer-terms svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--success-green);
+        }
+
+        #status-message {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        #status-message svg {
+            vertical-align: middle;
+            margin-right: 4px;
+        }
+
+        /* TELA DE PAGAMENTO APROVADO */
+        #approved-screen {
+            display: none;
+            text-align: center;
+            padding: 60px 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            width: 100%;
+            animation: fadeInUp 0.5s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .approved-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 25px;
+            background-color: #ecfdf5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: scaleIn 0.4s ease forwards;
+        }
+
+        @keyframes scaleIn {
+            from { transform: scale(0); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .approved-icon svg {
+            width: 40px;
+            height: 40px;
+            stroke: var(--success-green);
+            stroke-width: 3;
+            fill: none;
+        }
+
+        .approved-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .approved-subtitle {
+            font-size: 16px;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .approved-btn {
+            background-color: var(--success-green);
+            color: white;
+            border: none;
+            width: 100%;
+            max-width: 300px;
+            height: 48px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .approved-btn:hover {
+            background-color: #059669;
+        }
+
+        .approved-details {
+            background-color: #f9fafb;
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            padding: 16px;
+            margin-top: 25px;
+            text-align: left;
+        }
+
+        .approved-details .detail-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: var(--text-gray);
+        }
+
+        .approved-details .detail-row span:last-child {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="checkout-container">
+        
+        <div id="loading">
+            <div class="spinner"></div>
+            Gerando seu pagamento...
+        </div>
+
+        <div class="banner" id="top-banner">
+            Pagamento 100% Seguro
+        </div>
+
+        <!-- Tela do QR Code -->
+        <div class="content" id="pix-content">
+            <h2 class="title">Escaneie o QR-code ou copie o código.</h2>
+            <hr class="divider">
+
+            <div class="qr-code-box">
+                <img id="qr-image" src="" alt="QR Code PIX">
+            </div>
+
+            <div class="value-row">
+                <span class="value-label">Valor PIX:</span>
+                <span class="value-amount" id="pix-amount">R$ 0,00</span>
+            </div>
+
+            <div class="pix-string" id="pix-string">Gerando código...</div>
+
+            <button class="btn-copy" id="btn-copy" onclick="copiarPix()">
+                <svg viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                Copiar Código Pix
+            </button>
+
+            <div id="status-message"></div>
+
+            <h3 class="instructions-title">Como pagar:</h3>
+            
+            <div class="instruction-step">
+                <div class="step-number">1</div>
+                <div>Abra o aplicativo do seu banco de preferência.</div>
+            </div>
+            <div class="instruction-step">
+                <div class="step-number">2</div>
+                <div>Escolha a opção de pagar via <strong>Pix</strong> e selecione "QR Code" ou "Copia e Cola".</div>
+            </div>
+            <div class="instruction-step">
+                <div class="step-number">3</div>
+                <div>Confirme os dados da transação e o valor.</div>
+            </div>
+            <div class="instruction-step">
+                <div class="step-number">4</div>
+                <div>Pronto! Seu acesso será liberado assim que o pagamento for confirmado.</div>
+            </div>
+
+            <div class="security-box">
+                <p>Sua segurança é nossa prioridade. Utilizamos criptografia de ponta a ponta para proteger seus dados:</p>
+                
+                <div class="security-item">
+                    <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    Processamento imediato;
+                </div>
+                <div class="security-item">
+                    <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    Garantia de proteção ao consumidor;
+                </div>
+                <div class="security-item">
+                    <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    Ambiente criptografado SSL.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela de Pagamento Aprovado (oculta inicialmente) -->
+        <div id="approved-screen">
+            <div class="approved-icon">
+                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </div>
+            <h2 class="approved-title">Pagamento Aprovado</h2>
+            <p class="approved-subtitle">Seu pagamento foi confirmado com sucesso. Você será redirecionado em instantes...</p>
+            
+            <div class="approved-details">
+                <div class="detail-row">
+                    <span>Valor pago:</span>
+                    <span id="approved-amount">R$ 0,00</span>
+                </div>
+                <div class="detail-row">
+                    <span>ID da transação:</span>
+                    <span id="approved-transaction-id">---</span>
+                </div>
+                <div class="detail-row">
+                    <span>Status:</span>
+                    <span id="approved-status">Aprovado</span>
+                </div>
+            </div>
+
+            <button class="approved-btn" onclick="window.location.href='https://offeersegurooo.vercel.app/up02'">
+                Ir para página de confirmação
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </button>
+        </div>
+
+        <div class="footer-terms">
+            <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+            <p>Seu pagamento está seguro. Ao continuar você concorda com nossas políticas.</p>
+        </div>
+    </div>
+
+    <script>
+        const API_KEY = 'sk_220715873acbf9718fdd92d1d08b541320f5c7c711b5017be8cb91edc9192bdf';
+        const API_URL = 'https://multi.paradisepags.com/api/v1/transaction.php';
+        const QUERY_URL = 'https://multi.paradisepags.com/api/v1/query.php';
+        let codigoPixCompleto = "";
+        let transactionId = null;
+        let pollingInterval = null;
+        let tentativas = 0;
+        const MAX_TENTATIVAS = 60;
+        let valorPago = 0;
+
+        // Ícones SVG para substituir emojis
+        const iconCheck = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+        const iconX = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>';
+
+        function generateRandomEmail() {
+            const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+            let res = '';
+            for (let i = 0; i < 10; i++) res += chars.charAt(Math.floor(Math.random() * chars.length));
+            return res + '@pags.com';
+        }
+
+        async function gerarTransacaoPIX() {
+            const loadingEl = document.getElementById('loading');
+            const imgQr = document.getElementById('qr-image');
+            const pixStringEl = document.getElementById('pix-string');
+            const pixAmountEl = document.getElementById('pix-amount');
+            const statusMsg = document.getElementById('status-message');
+
+            imgQr.style.display = 'none';
+
+            const randomEmail = generateRandomEmail();
+
+            const transactionData = {
+                "amount": 100,
+                "description": "Pagamento Checkout",
+                "reference": "REF-" + Date.now(),
+                "source": "api_externa",
+                "customer": {
+                    "name": "Cliente Comprador",
+                    "email": randomEmail,
+                    "phone": "11999999999",
+                    "document": "05531510101"
+                }
+            };
+
+            try {
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: { 'X-API-Key': API_KEY, 'Content-Type': 'application/json' },
+                    body: JSON.stringify(transactionData)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Erro HTTP: ${response.status}`);
+                }
+
+                const data = await response.json();
+
+                if (data.status !== 'success') {
+                    throw new Error(data.message || 'Falha ao gerar PIX');
+                }
+
+                transactionId = data.transaction_id;
+                codigoPixCompleto = data.qr_code;
+                valorPago = data.amount;
+                pixStringEl.innerText = codigoPixCompleto || "Código não disponível";
+                pixAmountEl.innerText = (data.amount / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+                let base64Image = data.qr_code_base64;
+                if (!base64Image && data.qr_code) {
+                    base64Image = `https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=${encodeURIComponent(data.qr_code)}`;
+                    imgQr.src = base64Image;
+                    imgQr.onload = () => { imgQr.style.display = 'block'; };
+                    imgQr.onerror = () => {
+                        imgQr.alt = 'Não foi possível carregar o QR Code';
+                        imgQr.style.display = 'block';
+                    };
+                } else if (base64Image) {
+                    if (!base64Image.startsWith('data:image')) {
+                        base64Image = 'data:image/png;base64,' + base64Image;
+                    }
+                    imgQr.src = base64Image;
+                    imgQr.style.display = 'block';
+                    imgQr.onerror = () => {
+                        if (data.qr_code) {
+                            imgQr.src = `https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=${encodeURIComponent(data.qr_code)}`;
+                        }
+                    };
+                } else {
+                    throw new Error('Resposta da API não contém qr_code ou qr_code_base64');
+                }
+
+                loadingEl.style.display = 'none';
+                statusMsg.innerText = 'Aguardando confirmação do pagamento...';
+                iniciarPolling();
+
+            } catch (error) {
+                console.error(error);
+                loadingEl.innerHTML = `${iconX} Erro: ${error.message}<br><small>Verifique a chave API ou sua conexão.</small>`;
+                loadingEl.style.color = '#f9005b';
+            }
+        }
+
+        async function verificarStatusPagamento() {
+            if (!transactionId) return;
+
+            try {
+                const response = await fetch(`${QUERY_URL}?action=get_transaction&id=${transactionId}`, {
+                    method: 'GET',
+                    headers: { 'X-API-Key': API_KEY }
+                });
+
+                if (!response.ok) {
+                    console.error('Erro ao consultar status:', response.status);
+                    return;
+                }
+
+                const data = await response.json();
+                console.log('Status atual:', data.status);
+
+                if (data.status === 'approved') {
+                    pararPolling();
+                    mostrarTelaAprovado();
+                } else if (data.status === 'failed' || data.status === 'refunded' || data.status === 'chargeback') {
+                    pararPolling();
+                    document.getElementById('status-message').innerHTML = `${iconX} Pagamento não aprovado.`;
+                }
+
+            } catch (error) {
+                console.error('Erro na verificação:', error);
+            }
+        }
+
+        function mostrarTelaAprovado() {
+            document.getElementById('pix-content').style.display = 'none';
+            document.getElementById('approved-screen').style.display = 'block';
+            
+            const banner = document.getElementById('top-banner');
+            banner.innerHTML = `${iconCheck} Pagamento Aprovado`;
+            banner.style.backgroundColor = 'var(--success-green)';
+            
+            document.getElementById('approved-amount').innerText = (valorPago / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            document.getElementById('approved-transaction-id').innerText = '#' + transactionId;
+            document.getElementById('approved-status').innerHTML = `${iconCheck} Aprovado`;
+            document.getElementById('approved-status').style.color = 'var(--success-green)';
+            
+            setTimeout(() => {
+                window.location.href = 'obrigado.html';
+            }, 4000);
+        }
+
+        function iniciarPolling() {
+            if (pollingInterval) clearInterval(pollingInterval);
+            tentativas = 0;
+            pollingInterval = setInterval(() => {
+                tentativas++;
+                if (tentativas > MAX_TENTATIVAS) {
+                    pararPolling();
+                    document.getElementById('status-message').innerText = 'Tempo de consulta esgotado. Se já pagou, aguarde alguns minutos.';
+                    return;
+                }
+                verificarStatusPagamento();
+            }, 5000);
+        }
+
+        function pararPolling() {
+            if (pollingInterval) {
+                clearInterval(pollingInterval);
+                pollingInterval = null;
+            }
+        }
+
+        function copiarPix() {
+            if(!codigoPixCompleto) return;
+            navigator.clipboard.writeText(codigoPixCompleto).then(() => {
+                const btn = document.getElementById('btn-copy');
+                const originalHTML = btn.innerHTML;
+                btn.innerHTML = "✓ Copiado com sucesso!";
+                btn.style.backgroundColor = 'var(--success-green)';
+                setTimeout(() => {
+                    btn.innerHTML = originalHTML;
+                    btn.style.backgroundColor = 'var(--primary-pink)';
+                }, 2500);
+            });
+        }
+
+        window.onload = gerarTransacaoPIX;
+    </script>
+</body>
+</html>

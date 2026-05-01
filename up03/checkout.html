@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento PIX - Checkout</title>
+    <style>
+        :root {
+            --primary-color: #f70059; /* Rosa/Vermelho do botão e banner */
+            --text-color: #333;
+            --bg-color: #f8f9fa;
+            --box-bg: #f4f6f9;
+            --border-color: #e0e0e0;
+            --success-color: #1bb753; /* Verde dos checks */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ececec;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .checkout-container {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .banner {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-color);
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .qr-code-box {
+            background-color: var(--box-bg);
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .qr-code-box img {
+            width: 180px;
+            height: 180px;
+            border-radius: 5px;
+            background-color: #fff;
+            padding: 5px;
+        }
+
+        .value-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .value-label {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .value-amount {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-color);
+        }
+
+        .pix-code-container {
+            margin-bottom: 15px;
+        }
+
+        .pix-code-input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            background-color: #fff;
+            color: #888;
+            border-radius: 5px;
+            font-size: 12px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            outline: none;
+            cursor: text;
+        }
+
+        .btn-copy {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 14px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.2s;
+            margin-bottom: 25px;
+        }
+
+        .btn-copy:hover {
+            background-color: #d6004d;
+        }
+
+        .btn-copy svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        .instructions-title {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+
+        .instruction-step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            font-size: 13px;
+            color: #444;
+            line-height: 1.4;
+        }
+
+        .step-number {
+            background-color: var(--primary-color);
+            color: white;
+            min-width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 11px;
+            font-weight: bold;
+            margin-right: 10px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .security-box {
+            background-color: var(--box-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 25px;
+        }
+
+        .security-box p {
+            font-size: 12px;
+            color: #444;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .security-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 12px;
+            color: #777;
+        }
+
+        .security-item svg {
+            width: 16px;
+            height: 16px;
+            fill: none;
+            stroke: var(--success-color);
+            stroke-width: 2;
+            margin-right: 8px;
+            flex-shrink: 0;
+        }
+
+        .footer-terms {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #888;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .footer-terms svg {
+            width: 20px;
+            height: 20px;
+            fill: none;
+            stroke: var(--success-color);
+            stroke-width: 2;
+        }
+
+        /* Overlay de Loading (Opcional, para aguardar a API) */
+        #loading {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(255,255,255,0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            font-weight: bold;
+            color: var(--primary-color);
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="checkout-container">
+        
+        <!-- Loading State -->
+        <div id="loading">Gerando PIX...</div>
+
+        <div class="banner">
+            PAGAMENTO 100% SEGURO
+        </div>
+
+        <div class="content">
+            <h2 class="title">Escaneie o QR-code ou copie o código.</h2>
+
+            <div class="qr-code-box">
+                <!-- QR Code Imagem (Será preenchida via JS) -->
+                <img id="qr-image" src="" alt="QR Code PIX">
+            </div>
+
+            <div class="value-row">
+                <span class="value-label">Valor PIX:</span>
+                <span class="value-amount" id="pix-amount">R$ 0,00</span>
+            </div>
+
+            <div class="pix-code-container">
+                <input type="text" id="pix-code-input" class="pix-code-input" readonly value="Carregando código PIX...">
+            </div>
+
+            <button class="btn-copy" onclick="copiarPix()">
+                <svg viewBox="0 0 24 24">
+                    <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                </svg>
+                Copiar PIX
+            </button>
+
+            <h3 class="instructions-title">Como pagar:</h3>
+            
+            <div class="instruction-step">
+                <div class="step-number">1</div>
+                <div>Abra o aplicativo do seu banco e selecione a opção de pagamento PIX</div>
+            </div>
+            <div class="instruction-step">
+                <div class="step-number">2</div>
+                <div>Escolha pagar usando o código QR ou copie o código PIX acima</div>
+            </div>
+            <div class="instruction-step">
+                <div class="step-number">3</div>
+                <div>Confirme os detalhes do pagamento e o destinatário</div>
+            </div>
+            <div class="instruction-step">
+                <div class="step-number">4</div>
+                <div>Conclua o pagamento e guarde o comprovante (você será redirecionado automaticamente após o pagamento)</div>
+            </div>
+
+            <div class="security-box">
+                <p>Seus dados serão armazenados conosco de maneira completamente segura, sendo utilizados apenas para:</p>
+                
+                <div class="security-item">
+                    <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22 4 12 14.01 9 11.01" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Envio de comprovante;
+                </div>
+                <div class="security-item">
+                    <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22 4 12 14.01 9 11.01" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Garantia de devolução em caso de insatisfação;
+                </div>
+                <div class="security-item">
+                    <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22 4 12 14.01 9 11.01" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Acompanhar o processo de sua compra;
+                </div>
+            </div>
+
+            <div class="footer-terms">
+                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Ao finalizar o pagamento você concorda com nossos termos de uso e privacidade.
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // ==========================================
+        // CONFIGURAÇÕES DA API PARADISE
+        // ==========================================
+        const API_KEY = 'sk_220715873acbf9718fdd92d1d08b541320f5c7c711b5017be8cb91edc9192bdf'; // <-- COLOQUE SUA CHAVE AQUI
+        const API_URL = 'https://multi.paradisepags.com/api/v1/transaction.php';
+
+        // Dados simulados do cliente e produto (você deve pegar isso do seu sistema)
+        const transactionData = {
+            "amount": 2785, // R$ 27,85 em centavos
+            "description": "Produto Exemplo Checkout",
+            "reference": "REF-" + Math.floor(Math.random() * 100000), // ID único
+            "source": "api_externa", // Ignora validação de productHash se não cadastrado
+            "customer": {
+                "name": "Cliente Teste",
+                "email": "cliente@email.com",
+                "phone": "11999999999",
+                "document": "00000000000" // CPF/CNPJ válido
+            }
+        };
+
+        // Função para formatar o valor de centavos para Real (R$)
+        function formatarMoeda(valorEmCentavos) {
+            const valor = valorEmCentavos / 100;
+            return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        }
+
+        // Função para gerar o PIX via API
+        async function gerarTransacaoPIX() {
+            try {
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'X-API-Key': API_KEY,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(transactionData)
+                });
+
+                const data = await response.json();
+
+                if (data.status === 'success' || data.qr_code) {
+                    // Atualiza a Interface com os dados retornados
+                    document.getElementById('qr-image').src = data.qr_code_base64;
+                    document.getElementById('pix-code-input').value = data.qr_code;
+                    document.getElementById('pix-amount').innerText = formatarMoeda(data.amount || transactionData.amount);
+                    
+                    // Esconde a tela de loading
+                    document.getElementById('loading').style.display = 'none';
+                } else {
+                    alert("Erro ao gerar PIX: " + (data.message || "Verifique os dados enviados."));
+                    document.getElementById('loading').innerText = "Erro ao carregar.";
+                }
+
+            } catch (error) {
+                console.error("Erro na requisição:", error);
+                alert("Erro de comunicação com a API Paradise.");
+                document.getElementById('loading').innerText = "Erro de conexão.";
+            }
+        }
+
+        // Função para copiar o código PIX ("Copia e Cola")
+        function copiarPix() {
+            const copyText = document.getElementById("pix-code-input");
+            
+            // Seleciona o campo de texto
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); // Para dispositivos mobile
+            
+            // Copia para o clipboard
+            navigator.clipboard.writeText(copyText.value).then(() => {
+                const btn = document.querySelector('.btn-copy');
+                const textoOriginal = btn.innerHTML;
+                
+                // Feedback visual rápido
+                btn.innerHTML = 'Copiado com sucesso!';
+                btn.style.backgroundColor = '#1bb753'; // Muda pra verde
+                
+                setTimeout(() => {
+                    btn.innerHTML = textoOriginal;
+                    btn.style.backgroundColor = ''; // Volta ao rosa
+                }, 2000);
+            }).catch(err => {
+                alert('Erro ao copiar o código. Tente selecionar o texto manualmente.');
+            });
+        }
+
+        // Inicia a geração do PIX assim que a página carrega
+        window.onload = () => {
+            if (API_KEY === 'sk_sua_chave_secreta_aqui') {
+                alert('Por favor, insira sua Chave Secreta na variável API_KEY dentro do código-fonte para funcionar corretamente.');
+            } else {
+                gerarTransacaoPIX();
+            }
+        };
+    </script>
+</body>
+</html>
