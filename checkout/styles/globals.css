@@ -1,0 +1,526 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --red: #fe2c55;
+  --red-dark: #e0193f;
+  --red-light: #fff0f3;
+  --gray-bg: #f7f7f8;
+  --gray-border: #e8e8e8;
+  --gray-text: #8a8a8a;
+  --text: #161823;
+  --white: #ffffff;
+  --radius: 12px;
+  --radius-sm: 8px;
+}
+
+html,
+body {
+  min-height: 100vh;
+  background: var(--gray-bg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--gray-bg);
+}
+
+/* ───────── OFFER BANNER ───────── */
+.offer-banner {
+  width: 100%;
+  background: var(--red);
+  color: white;
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.offer-banner span.icon {
+  font-size: 16px;
+}
+
+/* ───────── MERCHANT HEADER ───────── */
+.merchant-header {
+  background: var(--white);
+  width: 100%;
+  max-width: 420px;
+  margin: 20px 16px 0;
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.merchant-logo {
+  width: 56px;
+  height: 56px;
+  background: #000000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.merchant-logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+.merchant-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.merchant-secure {
+  font-size: 13px;
+  color: var(--gray-text);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ───────── CHECKOUT CARD ───────── */
+.checkout-card {
+  background: var(--white);
+  width: 100%;
+  max-width: 420px;
+  margin: 12px 16px 24px;
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.checkout-card h2 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.checkout-card .subtitle {
+  font-size: 13px;
+  color: var(--gray-text);
+  margin-bottom: 16px;
+}
+
+/* ───────── AMOUNT BOX ───────── */
+.amount-box {
+  background: var(--gray-bg);
+  border-radius: var(--radius-sm);
+  padding: 14px 20px;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.amount-label {
+  font-size: 12px;
+  color: var(--gray-text);
+  margin-bottom: 4px;
+}
+
+.amount-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--red);
+  letter-spacing: -0.5px;
+}
+
+/* ───────── METHOD TABS ───────── */
+.method-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1.5px solid var(--gray-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+
+.method-tab {
+  padding: 11px 0;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  background: var(--white);
+  color: var(--text);
+  transition: background 0.15s, color 0.15s;
+  outline: none;
+}
+
+.method-tab:first-child {
+  border-right: 1.5px solid var(--gray-border);
+}
+
+.method-tab.active {
+  background: var(--red);
+  color: white;
+}
+
+.method-tab:not(.active):hover {
+  background: var(--gray-bg);
+}
+
+/* ───────── PHONE INPUT ───────── */
+.phone-input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid var(--gray-border);
+  border-radius: var(--radius-sm);
+  padding: 0 14px;
+  height: 50px;
+  margin-bottom: 14px;
+  transition: border-color 0.15s;
+  background: white;
+}
+
+.phone-input-wrapper:focus-within {
+  border-color: var(--red);
+}
+
+.phone-flag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 10px;
+  font-size: 14px;
+  color: var(--text);
+  font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.flag-emoji {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.phone-divider {
+  width: 1px;
+  height: 22px;
+  background: var(--gray-border);
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.phone-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color: var(--text);
+  background: transparent;
+  min-width: 0;
+}
+
+.phone-input::placeholder {
+  color: #b8b8b8;
+}
+
+/* ───────── MULTIBANCO FIELDS ───────── */
+.multibanco-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input-group label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gray-text);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.input-field {
+  border: 1.5px solid var(--gray-border);
+  border-radius: var(--radius-sm);
+  padding: 0 14px;
+  height: 50px;
+  font-size: 15px;
+  color: var(--text);
+  background: white;
+  outline: none;
+  transition: border-color 0.15s;
+  width: 100%;
+}
+
+.input-field:focus {
+  border-color: var(--red);
+}
+
+.input-field::placeholder {
+  color: #b8b8b8;
+}
+
+/* ───────── TERMS ───────── */
+.terms-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  padding: 12px 14px;
+  border: 1.5px solid var(--gray-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  user-select: none;
+}
+
+.terms-checkbox {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 2px solid var(--gray-border);
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.terms-checkbox:checked {
+  background: var(--red);
+  border-color: var(--red);
+}
+
+.terms-checkbox:checked::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 6px;
+  height: 10px;
+  border: 2px solid white;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+}
+
+.terms-text {
+  font-size: 13.5px;
+  color: var(--text);
+}
+
+.terms-link {
+  color: var(--red);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.terms-link:hover {
+  text-decoration: underline;
+}
+
+/* ───────── PAY BUTTON ───────── */
+.pay-button {
+  width: 100%;
+  height: 52px;
+  background: var(--red);
+  color: white;
+  border: none;
+  border-radius: 100px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s, opacity 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.pay-button:hover:not(:disabled) {
+  background: var(--red-dark);
+}
+
+.pay-button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.pay-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2.5px solid rgba(255, 255, 255, 0.4);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ───────── STATUS SCREEN ───────── */
+.status-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 24px;
+  text-align: center;
+  gap: 12px;
+}
+
+.status-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.status-icon.pending {
+  background: #fff8e1;
+}
+
+.status-icon.success {
+  background: #e8f5e9;
+}
+
+.status-icon.failed {
+  background: #ffebee;
+}
+
+.status-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.status-desc {
+  font-size: 14px;
+  color: var(--gray-text);
+  line-height: 1.5;
+  max-width: 280px;
+}
+
+/* ───────── MULTIBANCO REFERENCE ───────── */
+.mb-reference-box {
+  background: var(--gray-bg);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.mb-ref-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 14px;
+  border-bottom: 1px solid var(--gray-border);
+}
+
+.mb-ref-row:last-child {
+  border-bottom: none;
+}
+
+.mb-ref-label {
+  color: var(--gray-text);
+  font-size: 13px;
+}
+
+.mb-ref-value {
+  font-weight: 700;
+  color: var(--text);
+  font-size: 15px;
+}
+
+/* ───────── MBWAY PENDING ───────── */
+.mbway-pending-box {
+  background: var(--gray-bg);
+  border-radius: var(--radius-sm);
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.mbway-phone-display {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 8px 0 4px;
+}
+
+.mbway-hint {
+  font-size: 13px;
+  color: var(--gray-text);
+}
+
+.pulse-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ffc107;
+  margin-right: 6px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+/* ───────── ERROR MESSAGE ───────── */
+.error-message {
+  background: #ffebee;
+  border: 1px solid #ffcdd2;
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 13px;
+  color: #c62828;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ───────── RESPONSIVE ───────── */
+@media (max-width: 460px) {
+  .merchant-header,
+  .checkout-card {
+    margin-left: 12px;
+    margin-right: 12px;
+    border-radius: var(--radius);
+  }
+}
