@@ -1,36 +1,502 @@
-import{c as S,r as n,j as a,A as N,m as y}from"./index-CVEK021F.js";import{T as O,g as H,q as j}from"./quiz-data-Br8uF9yo.js";import{T as $}from"./TikTokLogo-COOyS_hv.js";import{G as Q}from"./gift-ChzB9R3u.js";import{C as U,Q as X,a as Y,b as W}from"./TrustElements-cm1JSaYm.js";import{C as _}from"./chevron-right-BHOMC3Eh.js";import"./users-Dr0-zyS0.js";/**
+import {
+  c as S,
+  r as n,
+  j as a,
+  A as N,
+  m as y
+} from "./index-CVEK021F.js";
+import {
+  T as O,
+  g as H,
+  q as j
+} from "./quiz-data-Br8uF9yo.js";
+import {
+  T as $
+} from "./TikTokLogo-COOyS_hv.js";
+import {
+  G as Q
+} from "./gift-ChzB9R3u.js";
+import {
+  C as U,
+  Q as X,
+  a as Y,
+  b as W
+} from "./TrustElements-cm1JSaYm.js";
+import {
+  C as _
+} from "./chevron-right-BHOMC3Eh.js";
+import "./users-Dr0-zyS0.js";
+
+/**
  * @license lucide-react v0.462.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */const K=S("ArrowUp",[["path",{d:"m5 12 7-7 7 7",key:"hav0vg"}],["path",{d:"M12 19V5",key:"x0mq9r"}]]);/**
- * @license lucide-react v0.462.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */const Z=S("Banknote",[["rect",{width:"20",height:"12",x:"2",y:"6",rx:"2",key:"9lu3g6"}],["circle",{cx:"12",cy:"12",r:"2",key:"1c9p78"}],["path",{d:"M6 12h.01M18 12h.01",key:"113zkx"}]]);/**
- * @license lucide-react v0.462.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */const aa=S("CircleCheckBig",[["path",{d:"M21.801 10A10 10 0 1 1 17 3.335",key:"yps3ct"}],["path",{d:"m9 11 3 3L22 4",key:"1pflzl"}]]);/**
- * @license lucide-react v0.462.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */const ea=S("Sparkles",[["path",{d:"M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z",key:"4pj2yx"}],["path",{d:"M20 3v4",key:"1olli1"}],["path",{d:"M22 5h-4",key:"1gvqau"}],["path",{d:"M4 17v2",key:"vumght"}],["path",{d:"M5 18H3",key:"zchphs"}]]);/**
- * @license lucide-react v0.462.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */const ra=S("Trophy",[["path",{d:"M6 9H4.5a2.5 2.5 0 0 1 0-5H6",key:"17hqa7"}],["path",{d:"M18 9h1.5a2.5 2.5 0 0 0 0-5H18",key:"lmptdp"}],["path",{d:"M4 22h16",key:"57wxv0"}],["path",{d:"M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22",key:"1nw9bq"}],["path",{d:"M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22",key:"1np0yb"}],["path",{d:"M18 2H6v7a6 6 0 0 0 12 0V2Z",key:"u46fv3"}]]);/**
- * @license lucide-react v0.462.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */const ta=S("Volume2",[["path",{d:"M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z",key:"uqj9uw"}],["path",{d:"M16 9a5 5 0 0 1 0 6",key:"1q6k2b"}],["path",{d:"M19.364 18.364a9 9 0 0 0 0-12.728",key:"ijwkga"}]]);/**
- * @license lucide-react v0.462.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */const oa=S("VolumeX",[["path",{d:"M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z",key:"uqj9uw"}],["line",{x1:"22",x2:"16",y1:"9",y2:"15",key:"1ewh16"}],["line",{x1:"16",x2:"22",y1:"9",y2:"15",key:"5ykzw1"}]]),q=["#ff0000","#ff6b00","#ffb700","#adff00","#00ff91","#00c3ff","#0051ff","#9100ff","#ff00f2","#ff0099"],D=({active:e})=>{const r=n.useRef(null),l=n.useRef();return n.useEffect(()=>{if(!e||!r.current)return;const o=r.current,t=o.getContext("2d");if(!t)return;o.width=window.innerWidth,o.height=window.innerHeight;const m=[];for(let s=0;s<30;s++)m.push({x:Math.random()*o.width,y:Math.random()*-o.height,w:6+Math.random()*5,h:4+Math.random()*4,rotation:Math.random()*360,color:q[Math.floor(Math.random()*q.length)],rotationSpeed:-6+Math.random()*12,speedX:-2+Math.random()*4,speedY:2+Math.random()*3,resistance:.95});const u=()=>{t.clearRect(0,0,o.width,o.height);let s=!1;for(const i of m)i.speedY=Math.min(i.speedY+.15,4),i.speedX*=i.resistance,i.x+=i.speedX,i.y+=i.speedY,i.rotation+=i.rotationSpeed,i.y<o.height*1.2&&(s=!0),t.save(),t.translate(i.x,i.y),t.rotate(i.rotation*Math.PI/180),t.globalAlpha=.8,t.fillStyle=i.color,t.fillRect(-i.w/2,-i.h/2,i.w,i.h),t.restore();s&&(l.current=requestAnimationFrame(u))};return l.current=requestAnimationFrame(u),()=>{l.current&&cancelAnimationFrame(l.current)}},[e]),e?a.jsx("canvas",{ref:r,className:"fixed inset-0 pointer-events-none z-50",style:{width:"100vw",height:"100vh"}}):null},ia=({open:e,reward:r,onContinue:l})=>{const[o,t]=n.useState(0);return n.useEffect(()=>{if(!e){t(0);return}const m=800,u=performance.now(),s=i=>{const b=Math.min((i-u)/m,1),p=1-Math.pow(1-b,3);t(p*r),b<1&&requestAnimationFrame(s)};requestAnimationFrame(s)},[e,r]),a.jsx(N,{children:e&&a.jsxs(a.Fragment,{children:[a.jsx(D,{active:e}),a.jsx(y.div,{initial:{opacity:0},animate:{opacity:1},exit:{opacity:0},className:"fixed inset-0 bg-foreground/50 z-[1000] flex items-center justify-center",children:a.jsxs(y.div,{initial:{scale:.8,opacity:0},animate:{scale:1,opacity:1},exit:{scale:.8,opacity:0},transition:{duration:.3},className:"bg-card p-8 rounded-3xl w-[85%] max-w-[380px] text-center shadow-2xl border border-border/20 relative overflow-hidden",children:[a.jsx("div",{className:"w-16 h-16 mx-auto bg-reward/10 rounded-2xl flex items-center justify-center mb-4",children:a.jsx(Q,{className:"w-8 h-8 text-reward"})}),a.jsx("div",{className:"text-lg font-bold mb-1 text-reward",children:"Nova recompensa!"}),a.jsx("div",{className:"text-sm mb-2 text-muted-foreground",children:"Ganhou"}),a.jsxs("div",{className:"text-5xl font-black text-reward my-4 tabular-nums",children:["€",o.toFixed(2)]}),a.jsx("div",{className:"text-sm text-muted-foreground mb-6 leading-relaxed",children:"Responda a mais inquéritos para ganhar até 850€"}),a.jsx("button",{onClick:l,className:"bg-foreground text-background w-full py-3.5 rounded-2xl font-bold text-base hover:shadow-lg transition-all",children:"Continuar a receber"})]})})]})})},na=({open:e,onReceive:r})=>{const[l,o]=n.useState(0);return n.useEffect(()=>{if(!e){o(0);return}const t=1500,m=performance.now(),u=s=>{const i=Math.min((s-m)/t,1),b=1-Math.pow(1-i,3);o(b*O),i<1&&requestAnimationFrame(u)};requestAnimationFrame(u)},[e]),a.jsx(N,{children:e&&a.jsxs(a.Fragment,{children:[a.jsx(D,{active:e}),a.jsx(y.div,{initial:{opacity:0},animate:{opacity:1},exit:{opacity:0},className:"fixed inset-0 bg-foreground/60 z-[9999] flex items-center justify-center",children:a.jsxs(y.div,{initial:{scale:.8,opacity:0},animate:{scale:1,opacity:1},exit:{scale:.8,opacity:0},transition:{duration:.3},className:"bg-gradient-to-br from-primary via-primary to-primary/80 rounded-3xl p-8 text-center max-w-[360px] w-[90%] shadow-2xl shadow-primary/40 border border-primary-foreground/10 relative overflow-hidden",children:[a.jsx("div",{className:"w-20 h-20 mx-auto bg-primary-foreground/15 rounded-3xl flex items-center justify-center mb-4",children:a.jsx(ra,{className:"w-10 h-10 text-gold"})}),a.jsx("div",{className:"text-lg font-bold text-primary-foreground/80 mb-1",children:"Parabéns! 🎉"}),a.jsx("div",{className:"text-xl font-bold text-primary-foreground mb-2",children:"Completou o quiz e ganhou"}),a.jsxs("div",{className:"text-5xl font-black text-primary-foreground my-5 drop-shadow-lg tabular-nums",children:["€",l.toFixed(2)]}),a.jsx("div",{className:"text-base mb-8 text-primary-foreground/70",children:"Obrigado por participar no nosso inquérito!"}),a.jsx("button",{onClick:r,className:"bg-primary-foreground text-foreground font-bold py-4 px-8 rounded-2xl text-base hover:shadow-xl transition-all w-full",children:"Receber recompensa"})]})})]})})},z=["Maria","João","Ana","Pedro","Marta","Tiago","Catarina","Diogo","Inês","Tomás","Beatriz","Miguel","Rita","Nuno","Joana","Rui","Sofia","Bruno","Teresa","Gonçalo","Carolina","Hugo","Mariana","Ricardo","Filipa","Luís","Margarida","André","Sara","Paulo","Leonor","Carlos","Francisca","Jorge","Matilde","Vasco","Madalena","Dinis","Clara","Rafael","Lara","Afonso","Diana","Martim","Camila","Rodrigo","Eva","Francisco","Alice","Henrique","Luna","Eduardo","Aurora","Guilherme","Vitória","Gabriel","Mafalda","Lourenço","Helena","Gustavo"],I="A B C D F G H L M N O P R S T V".split(" "),L=["Lisboa","Porto","Vila Nova de Gaia","Amadora","Braga","Funchal","Coimbra","Setúbal","Almada","Agualva-Cacém","Queluz","Faro","Évora","Aveiro","Guimarães","Viseu","Leiria","Portimão","Cascais","Loures","Matosinhos","Gondomar","Seixal","Oeiras","Maia","Valongo","Odivelas","Barreiro","Ponta Delgada","Castelo Branco","Sintra","Figueira da Foz","Caldas da Rainha","Santarém","Viana do Castelo"],sa=()=>750+Math.random()*230,J=(e,r)=>{let l=[],o=[],t=0;const m=()=>{l=[...z].sort(()=>Math.random()-.5)},u=()=>{o=[...L].sort(()=>Math.random()-.5)};return m(),u(),()=>{l.length===0&&m();const s=l.pop(),i=I[Math.floor(Math.random()*I.length)],b=sa();let p;const h=Math.random();if(e&&e.length>0&&h<.15){if(p=e[0],r&&r.length>0&&Math.random()<.3){const x=r[Math.floor(Math.random()*r.length)];p=`${p} - ${x}`}}else if(e&&e.length>1&&h<.45){const x=e.slice(1);p=x[t%x.length],t++}else o.length===0&&u(),p=o.pop();return{name:`${s} ${i}.`,city:p,value:b.toFixed(2).replace(".",","),raw:b,id:Date.now()+Math.random()}}},la=({showTotal:e=!0,interval:r,geoCities:l,neighborhoods:o})=>{const t=n.useRef(J(l,o));n.useEffect(()=>{t.current=J(l,o)},[l,o]);const[m,u]=n.useState(()=>[t.current(),t.current(),t.current()]),[s,i]=n.useState(1847320),[b,p]=n.useState(0),[h,x]=n.useState(!1),[f,v]=n.useState(0),[M,C]=n.useState(!1),[A,P]=n.useState(!1),g=n.useRef(),R=n.useRef(),T=n.useCallback(()=>{const d=t.current();u(c=>[d,...c].slice(0,3)),i(c=>c+d.raw),v(d.raw),C(!0),setTimeout(()=>C(!1),2e3),P(!0),setTimeout(()=>P(!1),600)},[]);return n.useEffect(()=>{T();const d=()=>{const[c,B]=r||[1200,800],w=c+Math.random()*B;R.current=setTimeout(()=>{T(),d()},w)};return d(),()=>{R.current&&clearTimeout(R.current)}},[T]),n.useEffect(()=>{const d=s,c=1500,B=performance.now(),w=V=>{const k=V-B,F=Math.min(k/c,1),G=1-Math.pow(1-F,4);p(Math.round(d*G)),F<1?g.current=requestAnimationFrame(w):x(!0)};return g.current=requestAnimationFrame(w),()=>{g.current&&cancelAnimationFrame(g.current)}},[]),n.useEffect(()=>{if(!h)return;const d=b,c=s;if(d===c)return;const B=800,w=performance.now(),V=k=>{const F=k-w,G=Math.min(F/B,1),E=1-Math.pow(1-G,3);p(Math.round(d+(c-d)*E)),G<1&&(g.current=requestAnimationFrame(V))};return g.current=requestAnimationFrame(V),()=>{g.current&&cancelAnimationFrame(g.current)}},[s,h]),a.jsx(y.div,{initial:{opacity:0,y:12},animate:{opacity:1,y:0},transition:{delay:.25,duration:.4},className:"w-full mb-3",children:a.jsxs("div",{className:`rounded-2xl border overflow-hidden transition-colors duration-300 ${A?"border-primary/30":"border-border/40"}`,children:[e&&a.jsxs("div",{className:"bg-accent/60 px-3.5 py-2.5 flex items-center gap-3 border-b border-border/30",children:[a.jsx("div",{className:"w-8 h-8 bg-primary/10 rounded-xl flex items-center justify-center shrink-0",children:a.jsx(Z,{className:"w-4 h-4 text-primary"})}),a.jsxs("div",{className:"flex-1",children:[a.jsx("div",{className:"text-[10px] text-muted-foreground font-medium",children:"Total já pago hoje aos participantes"}),a.jsxs("div",{className:"flex items-center gap-2",children:[a.jsxs("span",{className:"text-sm font-black text-primary tabular-nums",children:["€ ",b.toLocaleString("pt-PT",{minimumFractionDigits:2})]}),a.jsx(N,{children:M&&a.jsxs(y.span,{initial:{opacity:0,y:8},animate:{opacity:1,y:0},exit:{opacity:0,y:-12},transition:{duration:.4},className:"text-[10px] font-bold text-primary flex items-center gap-0.5",children:[a.jsx(K,{className:"w-3 h-3"}),"+€",f.toFixed(2).replace(".",",")]})})]})]})]}),a.jsxs("div",{className:"p-3",children:[a.jsxs("div",{className:"flex items-center gap-2 mb-2",children:[a.jsxs("span",{className:"relative flex h-2 w-2",children:[a.jsx("span",{className:"animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"}),a.jsx("span",{className:"relative inline-flex rounded-full h-2 w-2 bg-green-500"})]}),a.jsx("span",{className:"text-[10px] font-bold text-muted-foreground",children:"Pagamentos em tempo real"})]}),a.jsx("div",{className:"space-y-1.5 overflow-hidden",children:a.jsx(N,{initial:!1,mode:"popLayout",children:m.map((d,c)=>a.jsxs(y.div,{initial:{opacity:0,height:0,y:-10},animate:{opacity:c===0?1:.6,height:"auto",y:0},exit:{opacity:0,height:0},transition:{duration:.35,ease:"easeOut"},className:"flex items-center gap-2.5 rounded-xl bg-background/60 border border-border/30 px-3 py-2",children:[a.jsx("div",{className:"w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center shrink-0",children:a.jsx(aa,{className:"w-3.5 h-3.5 text-primary"})}),a.jsxs("div",{className:"flex-1 min-w-0",children:[a.jsxs("p",{className:"text-[11px] font-bold text-foreground truncate",children:[d.name," ",a.jsxs("span",{className:"font-normal text-muted-foreground",children:["• ",d.city]})]}),a.jsxs("p",{className:"text-[10px] text-muted-foreground",children:["Recebeu ",a.jsxs("span",{className:"font-bold text-primary",children:["€ ",d.value]})," via MB WAY"]})]}),a.jsx("span",{className:"text-[9px] text-muted-foreground/70 shrink-0",children:c===0?"agora":c===1?"1 min":"2 min"})]},d.id))})})]})]})})};let da=0;const ca=()=>750+Math.random()*230,ua=({geoCities:e})=>{const[r,l]=n.useState([]),o=()=>{const t=z[Math.floor(Math.random()*z.length)],m="A B C D F G H L M N O P R S T V".split(" ")[Math.floor(Math.random()*16)];let u;e&&e.length>0&&Math.random()<.6?u=e[Math.floor(Math.random()*e.length)]:u=L[Math.floor(Math.random()*L.length)];const s={id:da++,name:`${t} ${m}.`,city:u,amount:ca()};l(i=>[...i.slice(-1),s]),setTimeout(()=>{l(i=>i.filter(b=>b.id!==s.id))},4e3)};return n.useEffect(()=>{o();const t=setInterval(o,8e3+Math.random()*5e3);return()=>clearInterval(t)},[]),a.jsx("div",{className:"fixed top-4 right-4 z-40 max-w-[280px] flex flex-col gap-2",children:a.jsx(N,{children:r.map(t=>a.jsx(y.div,{initial:{x:300,opacity:0},animate:{x:0,opacity:1},exit:{x:300,opacity:0},transition:{duration:.3},className:"bg-card p-3 rounded-2xl shadow-xl border border-border/40",children:a.jsxs("div",{className:"flex items-start gap-2.5",children:[a.jsx("div",{className:"w-8 h-8 rounded-xl bg-reward/10 flex items-center justify-center shrink-0 mt-0.5",children:a.jsx(U,{className:"w-4 h-4 text-reward"})}),a.jsxs("div",{children:[a.jsx("div",{className:"font-bold text-xs text-reward",children:"Levantamento Realizado!"}),a.jsxs("div",{className:"text-[11px] text-muted-foreground mt-0.5 leading-relaxed",children:[t.name," de ",t.city," levantou € ",t.amount.toFixed(2).replace(".",",")]})]})]})},t.id))})})},ma=e=>{const r=e.currentTime,l=e.createBuffer(1,e.sampleRate*.04,e.sampleRate),o=l.getChannelData(0);for(let p=0;p<o.length;p++)o[p]=(Math.random()*2-1)*.4;const t=e.createBufferSource();t.buffer=l;const m=e.createGain();m.gain.setValueAtTime(.3,r),m.gain.exponentialRampToValueAtTime(.001,r+.05);const u=e.createBiquadFilter();u.type="bandpass",u.frequency.value=3e3,u.Q.value=2,t.connect(u),u.connect(m),m.connect(e.destination),t.start(r);const s=e.createOscillator(),i=e.createGain();s.type="sine",s.frequency.setValueAtTime(150,r+.03),s.frequency.exponentialRampToValueAtTime(60,r+.12),i.gain.setValueAtTime(.2,r+.03),i.gain.exponentialRampToValueAtTime(.001,r+.12),s.connect(i),i.connect(e.destination),s.start(r+.03),s.stop(r+.15),[2637,3520].forEach(p=>{const h=e.createOscillator(),x=e.createGain();h.type="sine",h.frequency.setValueAtTime(p,r+.08),x.gain.setValueAtTime(.18,r+.08),x.gain.exponentialRampToValueAtTime(.001,r+.6),h.connect(x),x.connect(e.destination),h.start(r+.08),h.stop(r+.6);const f=e.createOscillator(),v=e.createGain();f.type="sine",f.frequency.setValueAtTime(p*2,r+.08),v.gain.setValueAtTime(.06,r+.08),v.gain.exponentialRampToValueAtTime(.001,r+.4),f.connect(v),v.connect(e.destination),f.start(r+.08),f.stop(r+.4)});for(let p=0;p<5;p++){const h=e.createOscillator(),x=e.createGain(),f=r+.15+p*.04;h.type="sine",h.frequency.setValueAtTime(4e3+Math.random()*2e3,f),h.frequency.exponentialRampToValueAtTime(2e3,f+.03),x.gain.setValueAtTime(.06,f),x.gain.exponentialRampToValueAtTime(.001,f+.04),h.connect(x),x.connect(e.destination),h.start(f),h.stop(f+.05)}},pa=()=>{const e=n.useRef(null),[r,l]=n.useState(!1);return{play:n.useCallback(()=>{if(!r)try{e.current||(e.current=new AudioContext),ma(e.current)}catch{}},[r]),muted:r,setMuted:l}},ha={Lisboa:["Baixa","Chiado","Alfama","Bairro Alto","Belém","Parque das Nações","Benfica","Alvalade","Lumiar"],Porto:["Ribeira","Foz do Douro","Boavista","Campanhã","Cedofeita","Paranhos"],Braga:["Sé","São Vítor","Nogueiró","Maximinos"],Coimbra:["Alta","Baixa","Santa Clara","Santo António dos Olivais"],Faro:["Sé","São Pedro","Montenegro"]},xa={Lisboa:["Amadora","Loures","Odivelas","Almada","Oeiras","Cascais","Sintra"],Porto:["Vila Nova de Gaia","Matosinhos","Gondomar","Maia","Valongo"],Braga:["Guimarães","Vila Nova de Famalicão","Barcelos"],Coimbra:["Figueira da Foz","Cantanhede","Condeixa-a-Nova"],Faro:["Loulé","Olhão","Tavira","Quarteira","Portimão"]};function fa(){const[e,r]=n.useState({userCity:null,nearbyCities:[],neighborhoods:[],loaded:!1});return n.useEffect(()=>{let l=!1;return fetch("https://ipapi.co/json/").then(o=>o.json()).then(o=>{if(l)return;const t=o.city||null,m=[];if(t){m.push(t);const s=xa[t];s&&m.push(...s.sort(()=>Math.random()-.5))}const u=t?ha[t]||[]:[];r({userCity:t,nearbyCities:m,neighborhoods:u,loaded:!0})}).catch(()=>{l||r({userCity:null,nearbyCities:[],neighborhoods:[],loaded:!1})}),()=>{l=!0}},[]),e}const Ma=({onComplete:e})=>{const[r,l]=n.useState(0),[o,t]=n.useState(null),[m,u]=n.useState(0),[s]=n.useState(()=>H()),[i,b]=n.useState(!1),[p,h]=n.useState(0),[x,f]=n.useState(!1),[v,M]=n.useState(!1),C=pa(),A=fa(),P=j[Math.min(r,j.length-1)],g=r/j.length*100,R=()=>{if(o===null)return;const d=s[r];h(d),u(c=>c+d),C.play(),b(!0)},T=()=>{b(!1),t(null),r+1<j.length?l(d=>d+1):f(!0)};return a.jsxs("div",{className:"min-h-screen flex justify-center items-center bg-background p-0 sm:p-5",children:[a.jsx(ua,{geoCities:A.nearbyCities}),a.jsxs("div",{className:"w-full max-w-[520px] min-h-[600px] bg-card rounded-none sm:rounded-3xl shadow-2xl shadow-foreground/5 flex flex-col overflow-hidden border border-border/40",children:[a.jsxs("div",{className:"flex justify-between items-center px-5 py-4 border-b border-border/40 bg-card",children:[a.jsx($,{}),a.jsxs("div",{className:"flex items-center gap-2",children:[a.jsx("button",{onClick:()=>C.setMuted(!C.muted),className:"w-8 h-8 rounded-xl flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-accent transition-all",title:C.muted?"Ativar som":"Desativar som",children:C.muted?a.jsx(oa,{className:"w-4 h-4"}):a.jsx(ta,{className:"w-4 h-4"})}),a.jsxs("div",{className:"bg-accent/80 px-4 py-2 rounded-2xl font-bold text-sm text-accent-foreground/80 flex items-center gap-1.5",children:[a.jsx("span",{className:"text-xs opacity-60",children:"€"}),a.jsx("span",{className:"text-foreground",children:m.toFixed(2)})]}),a.jsx("button",{onClick:()=>M(!0),className:"bg-primary text-primary-foreground px-4 py-2 rounded-2xl font-bold text-xs tracking-wider hover:shadow-lg hover:shadow-primary/25 transition-all",children:"LEVANTAR"})]})]}),a.jsx("div",{className:"w-full h-1 bg-muted/40 overflow-hidden",children:a.jsx("div",{className:"h-full bg-gradient-to-r from-primary to-primary/70 rounded-r-full transition-all duration-500",style:{width:`${g}%`}})}),a.jsx("div",{className:"px-6 pt-5 pb-1",children:a.jsxs("div",{className:"flex items-center justify-between",children:[a.jsxs("span",{className:"text-xs font-semibold text-muted-foreground tracking-wide uppercase",children:["Pergunta ",r+1," de ",j.length]}),a.jsx("div",{className:"flex gap-1",children:j.map((d,c)=>a.jsx("div",{className:`w-2 h-2 rounded-full transition-all duration-300 ${c<r?"bg-primary":c===r?"bg-primary scale-125 ring-2 ring-primary/30":"bg-muted"}`},c))})]})}),a.jsx(N,{mode:"wait",children:a.jsxs(y.div,{initial:{opacity:0,x:20},animate:{opacity:1,x:0},exit:{opacity:0,x:-20},transition:{duration:.25},className:"px-6 pb-4 flex-1 flex flex-col",children:[a.jsx(X,{currentQ:r,total:j.length}),a.jsx("h2",{className:"text-xl font-bold text-center my-4 leading-snug",children:P.question}),a.jsx("div",{className:"flex flex-col gap-2.5 mb-5",children:P.options.map((d,c)=>a.jsxs("button",{onClick:()=>t(c),className:`flex items-center p-3.5 px-4 rounded-2xl cursor-pointer transition-all duration-200 text-left ${o===c?"bg-primary/8 border-2 border-primary shadow-lg shadow-primary/10 ring-1 ring-primary/20":"border-2 border-border/50 hover:border-primary/30 hover:bg-accent/40"}`,children:[a.jsxs("div",{className:"flex items-center flex-1 gap-3",children:[a.jsx("span",{className:"text-2xl",children:d.emoji}),a.jsx("span",{className:`text-[15px] font-medium ${o===c?"text-foreground":"text-foreground/80"}`,children:d.text})]}),a.jsx("div",{className:`w-5 h-5 border-2 rounded-full flex items-center justify-center transition-all ${o===c?"bg-primary border-primary":"border-muted-foreground/25"}`,children:o===c&&a.jsx("svg",{width:"10",height:"8",viewBox:"0 0 10 8",fill:"none",children:a.jsx("path",{d:"M1 4L3.5 6.5L9 1",stroke:"white",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"})})})]},c))}),a.jsxs("button",{onClick:R,disabled:o===null,className:`mt-auto py-3.5 rounded-2xl font-bold text-base transition-all duration-300 flex items-center justify-center gap-2 ${o!==null?"bg-primary text-primary-foreground shadow-xl shadow-primary/25":"bg-muted text-muted-foreground cursor-not-allowed"}`,children:["Continuar",a.jsx(_,{className:"w-4 h-4"})]}),a.jsx(Y,{questionIndex:r}),a.jsxs("p",{className:"text-center text-reward font-medium mt-2 text-sm flex items-center justify-center gap-1.5 mb-3",children:[a.jsx(ea,{className:"w-3.5 h-3.5"}),"Habilite-se a um bónus adicional"]}),a.jsx(la,{showTotal:!1,interval:[1400,1e3],geoCities:A.nearbyCities,neighborhoods:A.neighborhoods})]},r)}),a.jsxs("div",{className:"border-t border-border/30 bg-muted/10",children:[a.jsx(W,{}),a.jsxs("div",{className:"px-4 pb-3 text-center text-[11px] text-muted-foreground",children:["Ao participar nas atividades de recompensa, concorda com os nossos"," ",a.jsx("a",{href:"#",className:"text-primary hover:underline font-medium",children:"Termos"})," e"," ",a.jsx("a",{href:"#",className:"text-primary hover:underline font-medium",children:"Condições"}),"."]})]})]}),v&&a.jsx("div",{className:"fixed inset-0 bg-foreground/40 backdrop-blur-sm z-[99999] flex items-center justify-center",onClick:()=>M(!1),children:a.jsxs("div",{className:"bg-card rounded-3xl w-[88%] max-w-[340px] overflow-hidden shadow-2xl border border-border/30",onClick:d=>d.stopPropagation(),children:[a.jsxs("div",{className:"bg-gradient-to-r from-primary to-primary/80 text-primary-foreground p-4 font-bold flex justify-between items-center",children:[a.jsx("span",{className:"flex items-center gap-2",children:"⚠️ Atenção"}),a.jsx("button",{onClick:()=>M(!1),className:"w-7 h-7 rounded-full bg-primary-foreground/20 flex items-center justify-center text-lg leading-none hover:bg-primary-foreground/30 transition-colors",children:"×"})]}),a.jsxs("div",{className:"p-6 text-center",children:[a.jsx("p",{className:"text-[15px] leading-relaxed text-foreground/80",children:"Ainda não é possível realizar o levantamento do valor. É necessário prosseguir com o inquérito."}),a.jsx("button",{onClick:()=>M(!1),className:"mt-4 bg-primary text-primary-foreground px-6 py-2.5 rounded-xl font-semibold text-sm",children:"Entendido"})]})]})}),a.jsx(ia,{open:i,reward:p,onContinue:T}),a.jsx(na,{open:x,onReceive:()=>{f(!1),e(s[s.length-1])}})]})};export{Ma as default};
+ */
+const K = S("ArrowUp", [
+  ["path", { d: "m5 12 7-7 7 7", key: "hav0vg" }],
+  ["path", { d: "M12 19V5", key: "x0mq9r" }]
+]);
+
+const Z = S("Banknote", [
+  ["rect", { width: "20", height: "12", x: "2", y: "6", rx: "2", key: "9lu3g6" }],
+  ["circle", { cx: "12", cy: "12", r: "2", key: "1c9p78" }],
+  ["path", { d: "M6 12h.01M18 12h.01", key: "113zkx" }]
+]);
+
+const aa = S("CircleCheckBig", [
+  ["path", { d: "M21.801 10A10 10 0 1 1 17 3.335", key: "yps3ct" }],
+  ["path", { d: "m9 11 3 3L22 4", key: "1pflzl" }]
+]);
+
+const ea = S("Sparkles", [
+  ["path", { d: "M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z", key: "4pj2yx" }],
+  ["path", { d: "M20 3v4", key: "1olli1" }],
+  ["path", { d: "M22 5h-4", key: "1gvqau" }],
+  ["path", { d: "M4 17v2", key: "vumght" }],
+  ["path", { d: "M5 18H3", key: "zchphs" }]
+]);
+
+const ra = S("Trophy", [
+  ["path", { d: "M6 9H4.5a2.5 2.5 0 0 1 0-5H6", key: "17hqa7" }],
+  ["path", { d: "M18 9h1.5a2.5 2.5 0 0 0 0-5H18", key: "lmptdp" }],
+  ["path", { d: "M4 22h16", key: "57wxv0" }],
+  ["path", { d: "M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22", key: "1nw9bq" }],
+  ["path", { d: "M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22", key: "1np0yb" }],
+  ["path", { d: "M18 2H6v7a6 6 0 0 0 12 0V2Z", key: "u46fv3" }]
+]);
+
+const ta = S("Volume2", [
+  ["path", { d: "M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z", key: "uqj9uw" }],
+  ["path", { d: "M16 9a5 5 0 0 1 0 6", key: "1q6k2b" }],
+  ["path", { d: "M19.364 18.364a9 9 0 0 0 0-12.728", key: "ijwkga" }]
+]);
+
+const oa = S("VolumeX", [
+  ["path", { d: "M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z", key: "uqj9uw" }],
+  ["line", { x1: "22", x2: "16", y1: "9", y2: "15", key: "1ewh16" }],
+  ["line", { x1: "16", x2: "22", y1: "9", y2: "15", key: "5ykzw1" }]
+]);
+
+const q = ["#ff0000", "#ff6b00", "#ffb700", "#adff00", "#00ff91", "#00c3ff", "#0051ff", "#9100ff", "#ff00f2", "#ff0099"];
+
+const D = ({ active: e }) => {
+  const r = n.useRef(null), l = n.useRef();
+  n.useEffect(() => {
+    if (!e || !r.current) return;
+    const o = r.current, t = o.getContext("2d");
+    if (!t) return;
+    o.width = window.innerWidth, o.height = window.innerHeight;
+    const m = [];
+    for (let s = 0; s < 30; s++) m.push({
+      x: Math.random() * o.width,
+      y: Math.random() * -o.height,
+      w: 6 + Math.random() * 5,
+      h: 4 + Math.random() * 4,
+      rotation: Math.random() * 360,
+      color: q[Math.floor(Math.random() * q.length)],
+      rotationSpeed: -6 + Math.random() * 12,
+      speedX: -2 + Math.random() * 4,
+      speedY: 2 + Math.random() * 3,
+      resistance: .95
+    });
+    const u = () => {
+      t.clearRect(0, 0, o.width, o.height);
+      let s = !1;
+      for (const i of m) i.speedY = Math.min(i.speedY + .15, 4), i.speedX *= i.resistance, i.x += i.speedX, i.y += i.speedY, i.rotation += i.rotationSpeed, i.y < o.height * 1.2 && (s = !0), t.save(), t.translate(i.x, i.y), t.rotate(i.rotation * Math.PI / 180), t.globalAlpha = .8, t.fillStyle = i.color, t.fillRect(-i.w / 2, -i.h / 2, i.w, i.h), t.restore();
+      s && (l.current = requestAnimationFrame(u))
+    };
+    return l.current = requestAnimationFrame(u), () => { l.current && cancelAnimationFrame(l.current) }
+  }, [e]);
+  return e ? a.jsx("canvas", { ref: r, className: "fixed inset-0 pointer-events-none z-50", style: { width: "100vw", height: "100vh" } }) : null
+};
+
+const ia = ({ open: e, reward: r, onContinue: l }) => {
+  const [o, t] = n.useState(0);
+  n.useEffect(() => {
+    if (!e) { t(0); return }
+    const m = 800, u = performance.now(), s = i => {
+      const b = Math.min((i - u) / m, 1), p = 1 - Math.pow(1 - b, 3);
+      t(p * r), b < 1 && requestAnimationFrame(s)
+    };
+    requestAnimationFrame(s)
+  }, [e, r]);
+  return a.jsx(N, {
+    children: e && a.jsxs(a.Fragment, {
+      children: [
+        a.jsx(D, { active: e }),
+        a.jsx(y.div, {
+          initial: { opacity: 0 },
+          animate: { opacity: 1 },
+          exit: { opacity: 0 },
+          className: "fixed inset-0 bg-foreground/50 z-[1000] flex items-center justify-center",
+          children: a.jsxs(y.div, {
+            initial: { scale: .8, opacity: 0 },
+            animate: { scale: 1, opacity: 1 },
+            exit: { scale: .8, opacity: 0 },
+            transition: { duration: .3 },
+            className: "bg-card p-8 rounded-3xl w-[85%] max-w-[380px] text-center shadow-2xl border border-border/20 relative overflow-hidden",
+            children: [
+              a.jsx("div", { className: "w-16 h-16 mx-auto bg-reward/10 rounded-2xl flex items-center justify-center mb-4", children: a.jsx(Q, { className: "w-8 h-8 text-reward" }) }),
+              a.jsx("div", { className: "text-lg font-bold mb-1 text-reward", children: "Nova recompensa!" }),
+              a.jsx("div", { className: "text-sm mb-2 text-muted-foreground", children: "Ganhou" }),
+              a.jsxs("div", { className: "text-5xl font-black text-reward my-4 tabular-nums", children: [o.toFixed(2).replace(".", ","), " €"] }),
+              a.jsx("div", { className: "text-sm text-muted-foreground mb-6 leading-relaxed", children: "Responda a mais inquéritos para ganhar até 850,00 €" }),
+              a.jsx("button", { onClick: l, className: "bg-foreground text-background w-full py-3.5 rounded-2xl font-bold text-base hover:shadow-lg transition-all", children: "Continuar a receber" })
+            ]
+          })
+        })
+      ]
+    })
+  })
+};
+
+const na = ({ open: e, onReceive: r }) => {
+  const [l, o] = n.useState(0);
+  n.useEffect(() => {
+    if (!e) { o(0); return }
+    const t = 1500, m = performance.now(), u = s => {
+      const i = Math.min((s - m) / t, 1), b = 1 - Math.pow(1 - i, 3);
+      o(b * O), i < 1 && requestAnimationFrame(u)
+    };
+    requestAnimationFrame(u)
+  }, [e]);
+  return a.jsx(N, {
+    children: e && a.jsxs(a.Fragment, {
+      children: [
+        a.jsx(D, { active: e }),
+        a.jsx(y.div, {
+          initial: { opacity: 0 },
+          animate: { opacity: 1 },
+          exit: { opacity: 0 },
+          className: "fixed inset-0 bg-foreground/60 z-[9999] flex items-center justify-center",
+          children: a.jsxs(y.div, {
+            initial: { scale: .8, opacity: 0 },
+            animate: { scale: 1, opacity: 1 },
+            exit: { scale: .8, opacity: 0 },
+            transition: { duration: .3 },
+            className: "bg-gradient-to-br from-primary via-primary to-primary/80 rounded-3xl p-8 text-center max-w-[360px] w-[90%] shadow-2xl shadow-primary/40 border border-primary-foreground/10 relative overflow-hidden",
+            children: [
+              a.jsx("div", { className: "w-20 h-20 mx-auto bg-primary-foreground/15 rounded-3xl flex items-center justify-center mb-4", children: a.jsx(ra, { className: "w-10 h-10 text-gold" }) }),
+              a.jsx("div", { className: "text-lg font-bold text-primary-foreground/80 mb-1", children: "Parabéns! 🎉" }),
+              a.jsx("div", { className: "text-xl font-bold text-primary-foreground mb-2", children: "Completou o quiz e ganhou" }),
+              a.jsxs("div", { className: "text-5xl font-black text-primary-foreground my-5 drop-shadow-lg tabular-nums", children: [l.toFixed(2).replace(".", ","), " €"] }),
+              a.jsx("div", { className: "text-base mb-8 text-primary-foreground/70", children: "Obrigado por participar no nosso inquérito!" }),
+              a.jsx("button", { onClick: r, className: "bg-primary-foreground text-foreground font-bold py-4 px-8 rounded-2xl text-base hover:shadow-xl transition-all w-full", children: "Receber recompensa" })
+            ]
+          })
+        })
+      ]
+    })
+  })
+};
+
+const z = ["Maria", "João", "Ana", "Pedro", "Marta", "Tiago", "Catarina", "Diogo", "Inês", "Tomás", "Beatriz", "Miguel", "Rita", "Nuno", "Joana", "Rui", "Sofia", "Bruno", "Teresa", "Gonçalo", "Carolina", "Hugo", "Mariana", "Ricardo", "Filipa", "Luís", "Margarida", "André", "Sara", "Paulo", "Leonor", "Carlos", "Francisca", "Jorge", "Matilde", "Vasco", "Madalena", "Dinis", "Clara", "Rafael", "Lara", "Afonso", "Diana", "Martim", "Camila", "Rodrigo", "Eva", "Francisco", "Alice", "Henrique", "Luna", "Eduardo", "Aurora", "Guilherme", "Vitória", "Gabriel", "Mafalda", "Lourenço", "Helena", "Gustavo"];
+const I = "A B C D F G H L M N O P R S T V".split(" ");
+const L = ["Lisboa", "Porto", "Vila Nova de Gaia", "Amadora", "Braga", "Funchal", "Coimbra", "Setúbal", "Almada", "Agualva-Cacém", "Queluz", "Faro", "Évora", "Aveiro", "Guimarães", "Viseu", "Leiria", "Portimão", "Cascais", "Loures", "Matosinhos", "Gondomar", "Seixal", "Oeiras", "Maia", "Valongo", "Odivelas", "Barreiro", "Ponta Delgada", "Castelo Branco", "Sintra", "Figueira da Foz", "Caldas da Rainha", "Santarém", "Viana do Castelo"];
+
+const sa = () => 750 + Math.random() * 230;
+const J = (e, r) => {
+  let l = [], o = [], t = 0;
+  const m = () => { l = [...z].sort(() => Math.random() - .5) };
+  const u = () => { o = [...L].sort(() => Math.random() - .5) };
+  m(); u();
+  return () => {
+    l.length === 0 && m();
+    const s = l.pop(), i = I[Math.floor(Math.random() * I.length)], b = sa();
+    let p;
+    const h = Math.random();
+    if (e && e.length > 0 && h < .15) {
+      if (p = e[0], r && r.length > 0 && Math.random() < .3) {
+        const x = r[Math.floor(Math.random() * r.length)];
+        p = `${p} - ${x}`
+      }
+    } else if (e && e.length > 1 && h < .45) {
+      const x = e.slice(1);
+      p = x[t % x.length], t++
+    } else o.length === 0 && u(), p = o.pop();
+    return { name: `${s} ${i}.`, city: p, value: b.toFixed(2).replace(".", ","), raw: b, id: Date.now() + Math.random() }
+  }
+};
+
+const la = ({ showTotal: e = !0, interval: r, geoCities: l, neighborhoods: o }) => {
+  const t = n.useRef(J(l, o));
+  n.useEffect(() => { t.current = J(l, o) }, [l, o]);
+  const [m, u] = n.useState(() => [t.current(), t.current(), t.current()]), [s, i] = n.useState(1847320), [b, p] = n.useState(0), [h, x] = n.useState(!1), [f, v] = n.useState(0), [M, C] = n.useState(!1), [A, P] = n.useState(!1), g = n.useRef(), R = n.useRef(), T = n.useCallback(() => {
+    const d = t.current();
+    u(c => [d, ...c].slice(0, 3)), i(c => c + d.raw), v(d.raw), C(!0), setTimeout(() => C(!1), 2e3), P(!0), setTimeout(() => P(!1), 600)
+  }, []);
+  n.useEffect(() => {
+    T();
+    const d = () => {
+      const [c, B] = r || [1200, 800], w = c + Math.random() * B;
+      R.current = setTimeout(() => { T(), d() }, w)
+    };
+    return d(), () => { R.current && clearTimeout(R.current) }
+  }, [T]);
+  n.useEffect(() => {
+    const d = s, c = 1500, B = performance.now(), w = V => {
+      const k = V - B, F = Math.min(k / c, 1), G = 1 - Math.pow(1 - F, 4);
+      p(Math.round(d * G)), F < 1 ? g.current = requestAnimationFrame(w) : x(!0)
+    };
+    return g.current = requestAnimationFrame(w), () => { g.current && cancelAnimationFrame(g.current) }
+  }, []);
+  n.useEffect(() => {
+    if (!h) return;
+    const d = b, c = s;
+    if (d === c) return;
+    const B = 800, w = performance.now(), V = k => {
+      const F = k - w, G = Math.min(F / B, 1), E = 1 - Math.pow(1 - G, 3);
+      p(Math.round(d + (c - d) * E)), G < 1 && (g.current = requestAnimationFrame(V))
+    };
+    return g.current = requestAnimationFrame(V), () => { g.current && cancelAnimationFrame(g.current) }
+  }, [s, h]);
+  return a.jsx(y.div, {
+    initial: { opacity: 0, y: 12 },
+    animate: { opacity: 1, y: 0 },
+    transition: { delay: .25, duration: .4 },
+    className: "w-full mb-3",
+    children: a.jsxs("div", {
+      className: `rounded-2xl border overflow-hidden transition-colors duration-300 ${A ? "border-primary/30" : "border-border/40"}`,
+      children: [
+        e && a.jsxs("div", {
+          className: "bg-accent/60 px-3.5 py-2.5 flex items-center gap-3 border-b border-border/30",
+          children: [
+            a.jsx("div", { className: "w-8 h-8 bg-primary/10 rounded-xl flex items-center justify-center shrink-0", children: a.jsx(Z, { className: "w-4 h-4 text-primary" }) }),
+            a.jsxs("div", {
+              className: "flex-1",
+              children: [
+                a.jsx("div", { className: "text-[10px] text-muted-foreground font-medium", children: "Total já pago hoje aos participantes" }),
+                a.jsxs("div", {
+                  className: "flex items-center gap-2",
+                  children: [
+                    a.jsxs("span", { className: "text-sm font-black text-primary tabular-nums", children: [b.toLocaleString("pt-PT", { minimumFractionDigits: 2 }), " €"] }),
+                    a.jsx(N, {
+                      children: M && a.jsxs(y.span, {
+                        initial: { opacity: 0, y: 8 },
+                        animate: { opacity: 1, y: 0 },
+                        exit: { opacity: 0, y: -12 },
+                        transition: { duration: .4 },
+                        className: "text-[10px] font-bold text-primary flex items-center gap-0.5",
+                        children: [a.jsx(K, { className: "w-3 h-3" }), "+", f.toFixed(2).replace(".", ","), " €"]
+                      })
+                    })
+                  ]
+                })
+              ]
+            })
+          ]
+        }),
+        a.jsxs("div", {
+          className: "p-3",
+          children: [
+            a.jsxs("div", {
+              className: "flex items-center gap-2 mb-2",
+              children: [
+                a.jsxs("span", { className: "relative flex h-2 w-2", children: [a.jsx("span", { className: "animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" }), a.jsx("span", { className: "relative inline-flex rounded-full h-2 w-2 bg-green-500" })] }),
+                a.jsx("span", { className: "text-[10px] font-bold text-muted-foreground", children: "Pagamentos em tempo real" })
+              ]
+            }),
+            a.jsx("div", {
+              className: "space-y-1.5 overflow-hidden",
+              children: a.jsx(N, {
+                initial: !1,
+                mode: "popLayout",
+                children: m.map((d, c) => a.jsxs(y.div, {
+                  initial: { opacity: 0, height: 0, y: -10 },
+                  animate: { opacity: c === 0 ? 1 : .6, height: "auto", y: 0 },
+                  exit: { opacity: 0, height: 0 },
+                  transition: { duration: .35, ease: "easeOut" },
+                  className: "flex items-center gap-2.5 rounded-xl bg-background/60 border border-border/30 px-3 py-2",
+                  children: [
+                    a.jsx("div", { className: "w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center shrink-0", children: a.jsx(aa, { className: "w-3.5 h-3.5 text-primary" }) }),
+                    a.jsxs("div", {
+                      className: "flex-1 min-w-0",
+                      children: [
+                        a.jsxs("p", { className: "text-[11px] font-bold text-foreground truncate", children: [d.name, " ", a.jsxs("span", { className: "font-normal text-muted-foreground", children: ["• ", d.city] })] }),
+                        a.jsxs("p", { className: "text-[10px] text-muted-foreground", children: ["Recebeu ", a.jsxs("span", { className: "font-bold text-primary", children: [d.value, " €"] }), " via MB WAY"] })
+                      ]
+                    }),
+                    a.jsx("span", { className: "text-[9px] text-muted-foreground/70 shrink-0", children: c === 0 ? "agora" : c === 1 ? "1 min" : "2 min" })
+                  ]
+                }, d.id))
+              })
+            })
+          ]
+        })
+      ]
+    })
+  })
+};
+
+let da = 0;
+const ca = () => 750 + Math.random() * 230;
+const ua = ({ geoCities: e }) => {
+  const [r, l] = n.useState([]), o = () => {
+    const t = z[Math.floor(Math.random() * z.length)], m = "A B C D F G H L M N O P R S T V".split(" ")[Math.floor(Math.random() * 16)];
+    let u;
+    e && e.length > 0 && Math.random() < .6 ? u = e[Math.floor(Math.random() * e.length)] : u = L[Math.floor(Math.random() * L.length)];
+    const s = { id: da++, name: `${t} ${m}.`, city: u, amount: ca() };
+    l(i => [...i.slice(-1), s]), setTimeout(() => { l(i => i.filter(b => b.id !== s.id)) }, 4e3)
+  };
+  n.useEffect(() => { o(); const t = setInterval(o, 8e3 + Math.random() * 5e3); return () => clearInterval(t) }, []);
+  return a.jsx("div", {
+    className: "fixed top-4 right-4 z-40 max-w-[280px] flex flex-col gap-2",
+    children: a.jsx(N, {
+      children: r.map(t => a.jsx(y.div, {
+        initial: { x: 300, opacity: 0 },
+        animate: { x: 0, opacity: 1 },
+        exit: { x: 300, opacity: 0 },
+        transition: { duration: .3 },
+        className: "bg-card p-3 rounded-2xl shadow-xl border border-border/40",
+        children: a.jsxs("div", {
+          className: "flex items-start gap-2.5",
+          children: [
+            a.jsx("div", { className: "w-8 h-8 rounded-xl bg-reward/10 flex items-center justify-center shrink-0 mt-0.5", children: a.jsx(U, { className: "w-4 h-4 text-reward" }) }),
+            a.jsxs("div", {
+              children: [
+                a.jsx("div", { className: "font-bold text-xs text-reward", children: "Levantamento Realizado!" }),
+                a.jsxs("div", { className: "text-[11px] text-muted-foreground mt-0.5 leading-relaxed", children: [t.name, " de ", t.city, " levantou ", t.amount.toFixed(2).replace(".", ","), " €"] })
+              ]
+            })
+          ]
+        })
+      }, t.id))
+    })
+  })
+};
+
+const ma = e => {
+  const r = e.currentTime, l = e.createBuffer(1, e.sampleRate * .04, e.sampleRate), o = l.getChannelData(0);
+  for (let p = 0; p < o.length; p++) o[p] = (Math.random() * 2 - 1) * .4;
+  const t = e.createBufferSource(); t.buffer = l;
+  const m = e.createGain(); m.gain.setValueAtTime(.3, r), m.gain.exponentialRampToValueAtTime(.001, r + .05);
+  const u = e.createBiquadFilter(); u.type = "bandpass", u.frequency.value = 3e3, u.Q.value = 2, t.connect(u), u.connect(m), m.connect(e.destination), t.start(r);
+  const s = e.createOscillator(), i = e.createGain(); s.type = "sine", s.frequency.setValueAtTime(150, r + .03), s.frequency.exponentialRampToValueAtTime(60, r + .12), i.gain.setValueAtTime(.2, r + .03), i.gain.exponentialRampToValueAtTime(.001, r + .12), s.connect(i), i.connect(e.destination), s.start(r + .03), s.stop(r + .15), [2637, 3520].forEach(p => {
+    const h = e.createOscillator(), x = e.createGain(); h.type = "sine", h.frequency.setValueAtTime(p, r + .08), x.gain.setValueAtTime(.18, r + .08), x.gain.exponentialRampToValueAtTime(.001, r + .6), h.connect(x), x.connect(e.destination), h.start(r + .08), h.stop(r + .6);
+    const f = e.createOscillator(), v = e.createGain(); f.type = "sine", f.frequency.setValueAtTime(p * 2, r + .08), v.gain.setValueAtTime(.06, r + .08), v.gain.exponentialRampToValueAtTime(.001, r + .4), f.connect(v), v.connect(e.destination), f.start(r + .08), f.stop(r + .4)
+  });
+  for (let p = 0; p < 5; p++) {
+    const h = e.createOscillator(), x = e.createGain(), f = r + .15 + p * .04; h.type = "sine", h.frequency.setValueAtTime(4e3 + Math.random() * 2e3, f), h.frequency.exponentialRampToValueAtTime(2e3, f + .03), x.gain.setValueAtTime(.06, f), x.gain.exponentialRampToValueAtTime(.001, f + .04), h.connect(x), x.connect(e.destination), h.start(f), h.stop(f + .05)
+  }
+};
+
+const pa = () => {
+  const e = n.useRef(null), [r, l] = n.useState(!1);
+  return { play: n.useCallback(() => { if (!r) try { e.current || (e.current = new AudioContext), ma(e.current) } catch { } }, [r]), muted: r, setMuted: l }
+};
+
+const ha = {
+  Lisboa: ["Baixa", "Chiado", "Alfama", "Bairro Alto", "Belém", "Parque das Nações", "Benfica", "Alvalade", "Lumiar"],
+  Porto: ["Ribeira", "Foz do Douro", "Boavista", "Campanhã", "Cedofeita", "Paranhos"],
+  Braga: ["Sé", "São Vítor", "Nogueiró", "Maximinos"],
+  Coimbra: ["Alta", "Baixa", "Santa Clara", "Santo António dos Olivais"],
+  Faro: ["Sé", "São Pedro", "Montenegro"]
+};
+const xa = {
+  Lisboa: ["Amadora", "Loures", "Odivelas", "Almada", "Oeiras", "Cascais", "Sintra"],
+  Porto: ["Vila Nova de Gaia", "Matosinhos", "Gondomar", "Maia", "Valongo"],
+  Braga: ["Guimarães", "Vila Nova de Famalicão", "Barcelos"],
+  Coimbra: ["Figueira da Foz", "Cantanhede", "Condeixa-a-Nova"],
+  Faro: ["Loulé", "Olhão", "Tavira", "Quarteira", "Portimão"]
+};
+
+function fa() {
+  const [e, r] = n.useState({ userCity: null, nearbyCities: [], neighborhoods: [], loaded: !1 });
+  n.useEffect(() => {
+    let l = !1;
+    return fetch("https://ipapi.co/json/").then(o => o.json()).then(o => {
+      if (l) return;
+      const t = o.city || null, m = [];
+      if (t) { m.push(t); const s = xa[t]; s && m.push(...s.sort(() => Math.random() - .5)) }
+      const u = t ? ha[t] || [] : [];
+      r({ userCity: t, nearbyCities: m, neighborhoods: u, loaded: !0 })
+    }).catch(() => { l || r({ userCity: null, nearbyCities: [], neighborhoods: [], loaded: !1 }) }), () => { l = !0 }
+  }, []);
+  return e
+}
+
+const Ma = ({ onComplete: e }) => {
+  const [r, l] = n.useState(0), [o, t] = n.useState(null), [m, u] = n.useState(0), [s] = n.useState(() => H()), [i, b] = n.useState(!1), [p, h] = n.useState(0), [x, f] = n.useState(!1), [v, M] = n.useState(!1), C = pa(), A = fa(), P = j[Math.min(r, j.length - 1)], g = r / j.length * 100, R = () => { if (o === null) return; const d = s[r]; h(d), u(c => c + d), C.play(), b(!0) }, T = () => { b(!1), t(null), r + 1 < j.length ? l(d => d + 1) : f(!0) };
+  return a.jsxs("div", {
+    className: "min-h-screen flex justify-center items-center bg-background p-0 sm:p-5",
+    children: [
+      a.jsx(ua, { geoCities: A.nearbyCities }),
+      a.jsxs("div", {
+        className: "w-full max-w-[520px] min-h-[600px] bg-card rounded-none sm:rounded-3xl shadow-2xl shadow-foreground/5 flex flex-col overflow-hidden border border-border/40",
+        children: [
+          a.jsxs("div", {
+            className: "flex justify-between items-center px-5 py-4 border-b border-border/40 bg-card",
+            children: [
+              a.jsx($, {}),
+              a.jsxs("div", {
+                className: "flex items-center gap-2",
+                children: [
+                  a.jsx("button", { onClick: () => C.setMuted(!C.muted), className: "w-8 h-8 rounded-xl flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-accent transition-all", title: C.muted ? "Ativar som" : "Desativar som", children: C.muted ? a.jsx(oa, { className: "w-4 h-4" }) : a.jsx(ta, { className: "w-4 h-4" }) }),
+                  a.jsxs("div", { className: "bg-accent/80 px-4 py-2 rounded-2xl font-bold text-sm text-accent-foreground/80 flex items-center gap-1.5", children: [a.jsx("span", { className: "text-foreground", children: [m.toFixed(2).replace(".", ","), " €"] })] }),
+                  a.jsx("button", { onClick: () => M(!0), className: "bg-primary text-primary-foreground px-4 py-2 rounded-2xl font-bold text-xs tracking-wider hover:shadow-lg hover:shadow-primary/25 transition-all", children: "LEVANTAR" })
+                ]
+              })
+            ]
+          }),
+          a.jsx("div", { className: "w-full h-1 bg-muted/40 overflow-hidden", children: a.jsx("div", { className: "h-full bg-gradient-to-r from-primary to-primary/70 rounded-r-full transition-all duration-500", style: { width: `${g}%` } }) }),
+          a.jsx("div", {
+            className: "px-6 pt-5 pb-1",
+            children: a.jsxs("div", {
+              className: "flex items-center justify-between",
+              children: [
+                a.jsxs("span", { className: "text-xs font-semibold text-muted-foreground tracking-wide uppercase", children: ["Pergunta ", r + 1, " de ", j.length] }),
+                a.jsx("div", { className: "flex gap-1", children: j.map((d, c) => a.jsx("div", { className: `w-2 h-2 rounded-full transition-all duration-300 ${c < r ? "bg-primary" : c === r ? "bg-primary scale-125 ring-2 ring-primary/30" : "bg-muted"}` }, c)) })
+              ]
+            })
+          }),
+          a.jsx(N, {
+            mode: "wait",
+            children: a.jsxs(y.div, {
+              initial: { opacity: 0, x: 20 }, animate: { opacity: 1, x: 0 }, exit: { opacity: 0, x: -20 }, transition: { duration: .25 }, className: "px-6 pb-4 flex-1 flex flex-col",
+              children: [
+                a.jsx(X, { currentQ: r, total: j.length }),
+                a.jsx("h2", { className: "text-xl font-bold text-center my-4 leading-snug", children: P.question }),
+                a.jsx("div", {
+                  className: "flex flex-col gap-2.5 mb-5",
+                  children: P.options.map((d, c) => a.jsxs("button", {
+                    onClick: () => t(c), className: `flex items-center p-3.5 px-4 rounded-2xl cursor-pointer transition-all duration-200 text-left ${o === c ? "bg-primary/8 border-2 border-primary shadow-lg shadow-primary/10 ring-1 ring-primary/20" : "border-2 border-border/50 hover:border-primary/30 hover:bg-accent/40"}`,
+                    children: [
+                      a.jsxs("div", { className: "flex items-center flex-1 gap-3", children: [a.jsx("span", { className: "text-2xl", children: d.emoji }), a.jsx("span", { className: `text-[15px] font-medium ${o === c ? "text-foreground" : "text-foreground/80"}`, children: d.text })] }),
+                      a.jsx("div", { className: `w-5 h-5 border-2 rounded-full flex items-center justify-center transition-all ${o === c ? "bg-primary border-primary" : "border-muted-foreground/25"}`, children: o === c && a.jsx("svg", { width: "10", height: "8", viewBox: "0 0 10 8", fill: "none", children: a.jsx("path", { d: "M1 4L3.5 6.5L9 1", stroke: "white", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin:"round" }) }) })
+                    ]
+                  }, c))
+                }),
+                a.jsxs("button", {
+                  onClick: R, disabled: o === null, className: `mt-auto py-3.5 rounded-2xl font-bold text-base transition-all duration-300 flex items-center justify-center gap-2 ${o !== null ? "bg-primary text-primary-foreground shadow-xl shadow-primary/25" : "bg-muted text-muted-foreground cursor-not-allowed"}`,
+                  children: ["Continuar", a.jsx(_, { className: "w-4 h-4" })]
+                }),
+                a.jsx(Y, { questionIndex: r }),
+                a.jsxs("p", { className: "text-center text-reward font-medium mt-2 text-sm flex items-center justify-center gap-1.5 mb-3", children: [a.jsx(ea, { className: "w-3.5 h-3.5" }), "Habilite-se a um bónus adicional"] }),
+                a.jsx(la, { showTotal: !1, interval: [1400, 1e3], geoCities: A.nearbyCities, neighborhoods: A.neighborhoods })
+              ]
+            }, r)
+          }),
+          a.jsxs("div", {
+            className: "border-t border-border/30 bg-muted/10",
+            children: [
+              a.jsx(W, {}),
+              a.jsxs("div", { className: "px-4 pb-3 text-center text-[11px] text-muted-foreground", children: ["Ao participar nas atividades de recompensa, concorda com os nossos", " ", a.jsx("a", { href: "#", className: "text-primary hover:underline font-medium", children: "Termos" }), " e", " ", a.jsx("a", { href: "#", className: "text-primary hover:underline font-medium", children: "Condições" }), "."] })
+            ]
+          })
+        ]
+      }),
+      v && a.jsx("div", {
+        className: "fixed inset-0 bg-foreground/40 backdrop-blur-sm z-[99999] flex items-center justify-center", onClick: () => M(!1),
+        children: a.jsxs("div", {
+          className: "bg-card rounded-3xl w-[88%] max-w-[340px] overflow-hidden shadow-2xl border border-border/30", onClick: d => d.stopPropagation(),
+          children: [
+            a.jsxs("div", { className: "bg-gradient-to-r from-primary to-primary/80 text-primary-foreground p-4 font-bold flex justify-between items-center", children: [a.jsx("span", { className: "flex items-center gap-2", children: "⚠️ Atenção" }), a.jsx("button", { onClick: () => M(!1), className: "w-7 h-7 rounded-full bg-primary-foreground/20 flex items-center justify-center text-lg leading-none hover:bg-primary-foreground/30 transition-colors", children: "×" })] }),
+            a.jsxs("div", { className: "p-6 text-center", children: [a.jsx("p", { className: "text-[15px] leading-relaxed text-foreground/80", children: "Ainda não é possível realizar o levantamento do valor. É necessário prosseguir com o inquérito." }), a.jsx("button", { onClick: () => M(!1), className: "mt-4 bg-primary text-primary-foreground px-6 py-2.5 rounded-xl font-semibold text-sm", children: "Entendido" })] })
+          ]
+        })
+      }),
+      a.jsx(ia, { open: i, reward: p, onContinue: T }),
+      a.jsx(na, { open: x, onReceive: () => { f(!1), e(s[s.length - 1]) } })
+    ]
+  })
+};
+
+export { Ma as default };
