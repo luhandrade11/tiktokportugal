@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecionando...</title>
+    <style>
+        /* Fundo branco e texto escuro para contraste */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff; /* Fundo Branco */
+            color: #1f2937; /* Cinza bem escuro, mais suave que preto puro */
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Animação do spinner com visual moderno e neutro (Tons de Azul) */
+        .spinner {
+            position: relative; 
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: #3b82f6; /* Cor base fallback */
+            /* Gradiente cônico suave */
+            background: conic-gradient(
+                from 0deg,
+                #4f46e5 0deg,   /* Azul Indigo */
+                #3b82f6 120deg, /* Azul vivo */
+                #93c5fd 240deg, /* Azul claro */
+                #4f46e5 360deg  /* Volta ao Azul Indigo */
+            );
+            animation: spin 1s linear infinite;
+            margin-bottom: 25px;
+            /* Sombra azulada bem discreta */
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.25);
+        }
+
+        /* Elemento de máscara para criar o anel (buraco no meio) */
+        .spinner::after {
+            content: '';
+            position: absolute;
+            top: 6px; 
+            left: 6px;
+            right: 6px;
+            bottom: 6px;
+            border-radius: 50%;
+            background-color: #ffffff; /* Fundo do meio branco */
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Estilo do texto limpo e profissional */
+        h1 {
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+            color: #111827;
+            text-shadow: none; /* Removido o efeito de sombra dupla do TikTok */
+        }
+
+        p {
+            font-size: 16px;
+            color: #6b7280; /* Cinza médio/claro para o subtítulo */
+            margin: 0;
+        }
+
+        #countdown {
+            font-weight: bold;
+            color: #3b82f6; /* Destacando o número na cor azul */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="spinner"></div>
+        <p>Aguarde <span id="countdown">3</span> segundos...</p>
+    </div>
+
+    <script>
+        // Configuração do tempo e redirecionamento
+        let tempoRestante = 3;
+        const elementoContagem = document.getElementById('countdown');
+        
+        // Seu link mantido
+        const linkDestino = "https://offeersegurooo.vercel.app/"; 
+
+        const intervalo = setInterval(() => {
+            tempoRestante--;
+            
+            // Evita mostrar números negativos se houver delay
+            if (tempoRestante >= 0) {
+                elementoContagem.textContent = tempoRestante;
+            }
+
+            if (tempoRestante <= 0) {
+                clearInterval(intervalo);
+                window.location.href = linkDestino; // Executa o redirecionamento
+            }
+        }, 1000); // 1 segundo
+    </script>
+
+</body>
+</html>

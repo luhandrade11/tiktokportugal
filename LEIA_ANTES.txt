@@ -1,0 +1,13 @@
+COLOQUE ESTES ARQUIVOS DENTRO DE public_html/inicio2/
+
+Passos:
+1. No Hostinger, apague a pasta antiga public_html/inicio2 se existir.
+2. Crie a pasta public_html/inicio2.
+3. Envie ESTE ZIP e extraia DENTRO de public_html/inicio2.
+4. Confirme que o caminho final ficou assim:
+   public_html/inicio2/index.html
+   public_html/inicio2/assets/...
+   public_html/inicio2/media/vsltiktok.mp4
+   public_html/inicio2/.htaccess
+
+Se ficar public_html/inicio2/inicio2/index.html, vai dar erro 403/404.
