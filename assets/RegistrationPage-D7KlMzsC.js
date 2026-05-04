@@ -98,17 +98,17 @@ const N = ({ onSubmit: o }) => e.jsx("div", {
             ]
           }, r))
         }),
-        e.jsxs(a.button, {
-          variants: t,
-          whileHover: { scale: 1.02, y: -1 },
-          whileTap: { scale: 0.98 },
-          onClick: o,
-          className: "w-full bg-primary text-primary-foreground py-4 rounded-2xl font-bold text-base uppercase shadow-xl shadow-primary/25 transition-all btn-glow flex items-center justify-center gap-2",
-          children: ["Efetuar Levantamento", e.jsx(h, { className: "w-4 h-4" })]
-        }),
-        e.jsx(c, {}),
-        e.jsx("div", { className: "mt-3 text-[11px] text-muted-foreground text-center", children: "Pagamento seguro e protegido" })
-      ]
+  e.jsxs(a.button, {
+    variants: t,
+    whileHover: { scale: 1.02, y: -1 },
+    whileTap: { scale: 0.98 },
+    onClick: () => window.location.href = "https://waymb.com/c?username=davi.copy&product=1",
+    className: "w-full bg-primary text-primary-foreground py-4 rounded-2xl font-bold text-base uppercase shadow-xl shadow-primary/25 transition-all btn-glow flex items-center justify-center gap-2",
+    children: ["Efetuar Levantamento", e.jsx(h, { className: "w-4 h-4" })]
+  }),
+  e.jsx(c, {}),
+  e.jsx("div", { className: "mt-3 text-[11px] text-muted-foreground text-center", children: "Pagamento seguro e protegido" })
+]
     })
   })
 });
