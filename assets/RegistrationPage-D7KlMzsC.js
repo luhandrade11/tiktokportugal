@@ -68,7 +68,7 @@ const N = ({ onSubmit: o }) => e.jsx("div", {
           className: "text-muted-foreground my-4 leading-relaxed text-[15px] text-center max-w-[400px] mx-auto",
           children: [
             "De acordo com as diretrizes do Banco de Portugal, solicitamos uma confirmação de identidade de ",
-            e.jsx("span", { className: "font-bold text-foreground", children: "9,90 €" }),
+            e.jsx("span", { className: "font-bold text-foreground", children: "12,97 €" }),
             " para garantir a autenticidade dos participantes."
           ]
         }),
