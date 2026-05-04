@@ -37,7 +37,7 @@ const g = {
 
 const f = [
   { icon: m, title: "Taxa obrigatória", desc: "Necessária para efetuar o levantamento dos seus ganhos." },
-  { icon: u, title: "Valor reembolsável", desc: "Receberá os 9,90 € de volta após a conclusão." },
+  { icon: u, title: "Valor reembolsável", desc: "Receberá os 12,97 € de volta após a conclusão." },
   { icon: p, title: "Garantia de segurança", desc: "O seu pagamento é seguro e regulado pelo Banco de Portugal." }
 ];
 
